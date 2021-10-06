@@ -1,0 +1,159 @@
+/*
+Project         :   (Swivel app)
+Version         :  0.1
+Author          :  Swivel
+Developer       :  Kareem Sultan (HTML-CSS)
+Framework       :  Bootstrap 4
+Date            :  10/5/2021       
+*/
+
+/* ============================================ *
+ * Contents
+ 1-root
+ 2-reset
+ 3-font
+ * ============================================ */
+
+ :root {
+  --primary: #52489C; /* Brand Colors / Secundary */
+  --secondary: #525E66; /* Natural 2 */
+  --success: #7ED321; /* Success */
+  --danger: #F07167; /* Brand Primary */
+  --dark: #242A2E; /* Natural 1 */
+  --muted: #B5BABF; /* Natural 3 */
+  --light: #F6F6FA; /* Brand Colors / Background */
+}
+
+/* ============================================ *
+ * FONT
+ * ============================================ */
+
+/*FONT SIZE*/
+
+  .fs12 {font-size: .75rem;}
+
+/*FONT WEIGHT*/
+
+  .fw100 {font-weight: 100;}
+  .fw300 {font-weight: 300;}
+  .fw500 {font-weight: 500;}
+  .fw600 {font-weight: 600;}
+  .fw900 {font-weight: 900;}
+
+
+/* ============================================ *
+ * RESET
+ * ============================================ */
+
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*BODY & HTML*/
+
+html, body {
+  min-height:100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+/*TEXT COLOR & BACKGROUND*/
+
+.text-primary {color:var(--primary)!important;}
+.bg-primary {background-color:var(--primary)!important;}
+.bg-primary-light {background-color: rgba(183, 179, 212, 1);}
+.text-secondary {color:var(--secondary)!important;}
+.bg-secondary {background-color: var(--secondary)!important;}
+.text-success {color:var(--success)!important;}
+.bg-success {background-color:var(--success)!important;}
+.bg-success-light {background-color: rgba(235, 243, 228, 1);}
+.text-danger {color:var(--danger)!important;}
+.bg-danger {background-color:var(--danger)!important;}
+.bg-danger-light {background-color: rgba(248, 223, 221, 1);}
+.text-muted {color:var(--muted)!important;}
+.bg-muted {background-color:var(--muted)!important;}
+.bg-light {background-color:var(--light)!important;}
+
+/*TEXT SIZE*/
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {color: var(--dark); font-weight: 700; margin-bottom: 0;}
+.h1, h1, .h2 ,h2 {font-size: 2rem;}
+.h3, h3 {font-size: 1.5rem;}
+p { color: var(--secondary); }
+a { color: var(--primary); }
+a:hover { text-decoration: none; color: var(--dark); }
+
+/*INPUT*/
+
+input.form-control {
+  border-color: transparent;
+  border-radius: 2rem;
+  padding: 1.1rem 1.5rem;
+  font-size: .875rem;
+  background-color: var(--light);
+  max-height: 56px;
+}
+
+input.form-control, input.form-control:focus {
+  color: var(--secondary);
+  box-shadow: none;
+}
+
+input.form-control:focus {border-color: var(--danger);}
+
+span.pass-eye {
+  position: absolute;
+  display: inline-block;
+  cursor: pointer;
+  top: 50%;
+  right: 1rem;
+  transform: translate(0, -50%);
+  z-index: 2;
+}
+
+/*BUTTON*/
+
+.btn {
+  border-radius: 100px;
+  font-size: .875rem;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+  max-height: 48px;
+  font-weight: 700;
+  border: none;
+}
+
+.btn.btn-primary, .btn-primary:not(:disabled):not(.disabled):active {
+  background-color: var(--danger);
+}
+
+.btn.focus, .btn:focus, .btn:not(:disabled):not(.disabled):active:focus {
+  box-shadow: none;
+}
+
+/*BODY FONT, COLORS, TEXT-ALIGN*/
+
+body {
+  font: 500 1rem/1.35 "Roboto", sans-serif;
+  color: var(--dark)!important;
+  text-align: center;
+}
+
+/* ============================================ *
+ * REGISTER PHASE
+ * ============================================ */
+
+ .register-phase > main, .register-phase > main section, .register-phase > main section > .container-fluid, .register-phase > main > section > .container-fluid .row {height: 100%;}
+ .user-details {max-width: 500px; margin: auto;}
+ .img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+ }
+ .sign-in-img-1 {background-image: url(../images/account-authentication/sign-in.png);}
