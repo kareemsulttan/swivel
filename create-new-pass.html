@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Create New Password</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
+  <meta name="author" content="Swivel" />
+  <meta name="email" content="" />
+  <meta name="website" content="" />
+  <meta name="Version" content="" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- ROBOTO FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="register-phase">
+  <!-- MAIN -->
+  <main>
+    <!-- CREATE NEW PASSWORD -->
+    <section class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-lg-6 px-lg-0 d-flex justify-content-center align-items-center">
+            <div class="section-nav text-left">
+              <a href="validation.html"><img src="images/back.png" alt="close"></a>
+            </div>
+            <div class="col-lg-8 px-lg-0">
+              <div class="user-details">
+                <div class="section-title mb-4 text-left">
+                  <h2>Create your new password</h2>
+                </div>
+                <form class="mb-3" action="">
+                  <div class="form-group position-relative">
+                    <input type="password" class="form-control" id="password-repeat" placeholder="Repeat new password*"
+                      required>
+                    <span class="input-img pass-eye" onclick="showPass()">
+                      <img src="images/eye-hide.png" alt="eye">
+                    </span>
+                  </div>
+                  <div class="form-group">
+                    <input type="password" class="form-control" id="password" placeholder="New Password*" required>
+                  </div>
+                  <button class="btn btn-primary btn-large">CREATE PASSWORD</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6 d-lg-block d-none img-bg create-new-pass-bg">
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <!-- JQUERY -->
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <!-- POOPER -->
+  <script src="js/popper.min.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- APP JS -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

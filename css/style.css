@@ -22,6 +22,7 @@ Date            :  10/5/2021
   --dark: #242A2E; /* Natural 1 */
   --muted: #B5BABF; /* Natural 3 */
   --light: #F6F6FA; /* Brand Colors / Background */
+  --white: #ffffff; /*White Color*/
 }
 
 /* ============================================ *
@@ -31,6 +32,7 @@ Date            :  10/5/2021
 /*FONT SIZE*/
 
   .fs12 {font-size: .75rem;}
+  .fs16 {font-size: 1rem;}
 
 /*FONT WEIGHT*/
 
@@ -84,14 +86,31 @@ html, body {
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {color: var(--dark); font-weight: 700; margin-bottom: 0;}
 .h1, h1, .h2 ,h2 {font-size: 2rem;}
-.h3, h3 {font-size: 1.5rem;}
+.h3, h3 {font-size: 1.125rem;}
 p { color: var(--secondary); }
 a { color: var(--primary); }
 a:hover { text-decoration: none; color: var(--dark); }
 
-/*INPUT*/
+/*ALERTS*/
 
-input.form-control {
+.alert {
+  position: relative;
+  padding: 1rem 1.5rem;
+  border: none;
+  border-radius: 1rem;
+  text-align: left;
+  margin-bottom: 0;
+  font-weight: normal;
+  font-size: 1rem;
+}
+.alert-success {
+  color: var(--white);
+  background-color: var(--success);
+}
+
+/*INPUTS*/
+
+.form-control {
   border-color: transparent;
   border-radius: 2rem;
   padding: 1.1rem 1.5rem;
@@ -99,15 +118,26 @@ input.form-control {
   background-color: var(--light);
   max-height: 56px;
 }
-
-input.form-control, input.form-control:focus {
+.form-control::placeholder {
+  color: var(--secondary);
+}
+textarea.form-control {
+  max-height: initial;
+}
+.form-control, .form-control:focus {
   color: var(--secondary);
   box-shadow: none;
 }
+.form-control:focus {border-color: var(--danger);}
 
-input.form-control:focus {border-color: var(--danger);}
-
-span.pass-eye {
+.file-upload {
+  height: 56px;
+}
+.custom-file-input {
+  height: 100%;
+  cursor: pointer;
+}
+span.input-img {
   position: absolute;
   display: inline-block;
   cursor: pointer;
@@ -116,14 +146,25 @@ span.pass-eye {
   transform: translate(0, -50%);
   z-index: 2;
 }
+span.upload-img {
+  right: 0;
+  z-index: 1;
+}
+span.upload-file-placeholder {
+  position: absolute;
+  top: 0;
+  left: 1.5rem;
+  line-height: 56px;
+  color: var(--secondary);
+  font-weight: 400;
+}
 
-/*BUTTON*/
+/*BUTTONS*/
 
 .btn {
   border-radius: 100px;
   font-size: .875rem;
-  padding-top: .8rem;
-  padding-bottom: .8rem;
+  padding: .9rem 2rem;
   max-height: 48px;
   font-weight: 700;
   border: none;
@@ -136,7 +177,8 @@ span.pass-eye {
 .btn.focus, .btn:focus, .btn:not(:disabled):not(.disabled):active:focus {
   box-shadow: none;
 }
-
+.btn-large {width: 100%;}
+.btn-small {width: 180px;}
 /*BODY FONT, COLORS, TEXT-ALIGN*/
 
 body {
@@ -146,14 +188,139 @@ body {
 }
 
 /* ============================================ *
- * REGISTER PHASE
+ * ACCOUNT AUTHENTICATION PHASE
  * ============================================ */
 
  .register-phase > main, .register-phase > main section, .register-phase > main section > .container-fluid, .register-phase > main > section > .container-fluid .row {height: 100%;}
+
+ /*USER REGISTRATION DETAILS*/
+
  .user-details {max-width: 500px; margin: auto;}
+ .section-nav {
+  position: absolute;
+  width: 100%;
+  top: 28px;
+  font-size: .875rem;
+  padding: 0 2rem;
+  font-weight: bold;
+  z-index: 1;
+ }
+ .section-nav-bottom {
+  top: initial;
+  bottom: 28px;
+ }
+ .section-nav-bottom.nav-three-items {
+  box-shadow: 0px 0px 16px rgba(215, 215, 215, 0.5);
+  bottom: 0;
+ }
+ .nav-three-items > div:last-child {
+  width: 180px;
+ }
+ .slogan {
+   margin-top: 232px;
+   margin-left: 100px;
+ }
+ .slogan > h1 {
+   font-size: 4rem;
+ }
  .img-bg {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
  }
- .sign-in-img-1 {background-image: url(../images/account-authentication/sign-in.png);}
+
+ /*SECTIONS BACKGROUNDS*/
+
+ .sign-in-bg {background-image: url(../images/account-authentication/sign-in.png);}
+ .forgot-password-bg {background-image: url(../images/account-authentication/forgot-password.png);}
+ .validation-bg {background-image: url(../images/account-authentication/validation.png);}
+ .create-new-pass-bg {background-image: url(../images/account-authentication/create-new-pass.png);}
+
+/*TOGGLE CHECKBOX STYLE*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 24px;
+}
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--light);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 16px;
+  width: 16px;
+  right: 4px;
+  bottom: 4px;
+  background-color: var(--muted);
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(-24px);
+  -ms-transform: translateX(-24px);
+  transform: translateX(-24px);
+  background-color: var(--primary);
+}
+
+/*VALIDATION CODE STYLE*/
+
+.validation .form-control {
+  width: 80px;
+  height: 56px;
+  font-size: 1.5rem;
+  border-radius: 0;
+  text-align: center;
+  padding: 0;
+  color: var(--dark);
+  font-weight: bold;
+  border-color: transparent;
+  background-color: transparent;
+  border-bottom-width: 4px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--light);
+}
+.validation .form-control:focus,.validation input:not(:placeholder-shown) {
+  border-bottom-color: var(--dark);
+}
+.validation .form-control::placeholder {
+  color: #E6E7EB
+}
+
+ /* ============================================ *
+ * RESPONSIVE
+ * ============================================ */
+
+ @media(max-width:430px) {
+   /*FONT SIZE FOR EXTRA SMALL SCREEN*/
+   .fsxs12 { font-size: .675rem; }
+   .fsxs13 { font-size: .8125rem; }
+   .fsxs14 { font-size: .875rem; }
+   /*VALIDATION CODE STYLE*/
+   .validation .form-control {
+    width: 50px;
+    height: 50px;
+    font-size: 1rem;
+  }
+ }
+
+
+
+

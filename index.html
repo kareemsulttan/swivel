@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Swivel-Sign In</title>
+  <title>Sign In</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
@@ -27,8 +27,8 @@
 <body class="register-phase">
   <!-- MAIN -->
   <main>
-    <!-- SIGN IN 1 SECTION -->
-    <section class="section sign-in-1">
+    <!-- SIGN IN -->
+    <section class="section">
       <div class="container-fluid">
         <div class="row">
           <div class="col-lg-6 px-lg-0 d-flex justify-content-center align-items-center">
@@ -42,21 +42,17 @@
               <div class="user-details">
                 <form class="mb-3" action="">
                   <div class="form-group">
-                    <input type="text" class="form-control" id="inputName" placeholder="Type your email or phone number" required>
+                    <input type="text" class="form-control" id="inputName" placeholder="Type your email or phone number"
+                      required>
                   </div>
                   <div class="form-group position-relative">
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                    <span class="pass-eye" onclick="showPass()">
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                      required>
+                    <span class="input-img pass-eye" onclick="showPass()">
                       <img src="images/eye-hide.png" alt="eye">
                     </span>
                   </div>
-                  <div class="form-group position-relative">
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
-                    <span class="pass-eye" onclick="showPass()">
-                      <img src="images/eye-hide.png" alt="eye">
-                    </span>
-                  </div>
-                  <button class="btn btn-primary w-100">SIGN IN</button>
+                  <button class="btn btn-primary btn-large">SIGN IN</button>
                 </form>
                 <div class="social-links">
                   <p class="text-secondary fs12">OR CONTINUE WITH</p>
@@ -69,8 +65,15 @@
                 </div>
               </div>
             </div>
+            <div class="section-nav section-nav-bottom fsxs12 d-flex justify-content-between">
+              <a href="forgot-password.html">FORGOT MY PASSWORD</a>
+              <a href="register.html">REGISTER</a>
+            </div>
           </div>
-          <div class="col-lg-6 d-lg-block d-none img-bg sign-in-img-1">
+          <div class="col-lg-6 d-lg-block d-none img-bg sign-in-bg">
+            <div class="col-lg-5 slogan text-left px-0">
+              <h1 class="text-white">Slogan goes here</h1>              
+            </div>
           </div>
         </div>
       </div>
