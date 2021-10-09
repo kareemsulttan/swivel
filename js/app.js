@@ -40,5 +40,14 @@ fields.forEach((field) => {
 // CUSTOM FILE NAME
 $(".custom-file-input").on("change", function() {
   var fileName = $(this).val().split("\\").pop();
-  $(this).siblings(".upload-file-placeholder").addClass("selected").html(fileName);
+  $(this).siblings(".upload-file-text").addClass("selected").html(fileName);
 });
+
+$('.terms').on("click",function(){
+  $('.terms-and-conditions').removeClass('d-none');
+  $('.privacy-policy').addClass('d-none')
+})
+$('.privacy').on("click",function(){
+  $('.terms-and-conditions').addClass('d-none');
+  $('.privacy-policy').removeClass('d-none')
+})
