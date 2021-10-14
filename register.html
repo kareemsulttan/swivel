@@ -28,7 +28,7 @@
   <!-- MAIN -->
   <main>
     <!-- Modal -->
-    <div class="modal fade" id="terms" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade" id="terms" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
       <div class="modal-dialog m-0 w-100" style="max-width: initial;">
         <div class="modal-content">
           <div class="modal-header mt-sm-0 mt-4 border-0 pt-5 flex-column align-items-center">
@@ -42,8 +42,8 @@
               <span><img src="images/close.png" alt="close"></span>
             </button>
           </div>
-          <div class="modal-body d-flex justify-content-center border-0">
-            <article class="col-lg-6 text-secondary text-left terms-and-conditions" style="line-height: 24px;">
+          <div class="modal-body flex-center-vh border-0">
+            <article class="col-lg-6 text-secondary text-left terms-and-conditions font-weight-normal" style="line-height: 24px;">
               <h1 class="modal-title w-100 text-center mb-4">Terms & Conditions</h1>
               <p class="mb-5">
                 Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in
@@ -82,7 +82,7 @@
                 through the fabric of our lives.                
               </p>
             </article>
-            <article class="col-lg-6 text-secondary text-left privacy-policy d-none" style="line-height: 24px;">
+            <article class="col-lg-6 text-secondary text-left privacy-policy d-none font-weight-normal" style="line-height: 24px;">
               <h1 class="modal-title w-100 text-center mb-4">Privacy Policy</h1>
               <p class="mb-5">
                 Computers have become ubiquitous in almost every facet of our lives. At work, desk jockeys spend hours in
@@ -126,21 +126,16 @@
       </div>
     </div>
     <!-- REGISTER -->
-    <section class="section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6 px-lg-0 d-flex justify-content-center align-items-center">
-            <div class="section-nav text-left">
-              <a href="#">
-                <img src="images/close.png" alt="close">
-              </a>
-            </div>
+    <section class="section h-100">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <div class="col-lg-6 px-lg-0 flex-center-vh">
             <div class="col-lg-8 px-lg-0">
               <div class="section-title mb-4">
                 <div class="logo mb-4">
                   <a href="#"><img src="images/logo.png" alt="logo"></a>
                 </div>
-                <h2>Register and <br /> find your dream work</h2>
+                <h2>Register and <br/> find top candidates</h2>
               </div>
               <div class="user-details">
                 <form class="mb-3" action="">
@@ -151,7 +146,7 @@
                   <div class="form-group position-relative">
                     <input type="password" class="form-control" id="password" placeholder="Enter your password"
                       required>
-                    <span class="input-img pass-eye" onclick="showPass()">
+                    <span class="input-img pr-3" onclick="showPass()">
                       <img src="images/eye-hide.png" alt="eye">
                     </span>
                   </div>
@@ -164,12 +159,11 @@
                         data-target="#terms">Privacy Policy</a> and <a href="#" data-toggle="modal"
                         data-target="#terms">Terms of use</a></span>
                   </div>
-                  <button class="btn btn-primary btn-large">SREGISTER</button>
+                  <button class="btn btn-primary btn-lg">REGISTER</button>
                 </form>
                 <div class="social-links">
                   <p class="text-secondary fs12">OR CONTINUE WITH</p>
                   <ul class="list-unstyled d-flex justify-content-center">
-                    <li><a class="mx-2" href="#"><img src="images/social-apple.png" alt="social"></a></li>
                     <li><a class="mx-2" href="#"><img src="images/social-linkedin.png" alt="social"></a></li>
                     <li><a class="mx-2" href="#"><img src="images/social-facebook.png" alt="social"></a></li>
                     <li><a class="mx-2" href="#"><img src="images/social-google.png" alt="social"></a></li>
@@ -177,14 +171,10 @@
                 </div>
               </div>
             </div>
-            <div class="section-nav section-nav-bottom fsxs12 d-flex justify-content-between">
-              <a href="">I PREFER USE MY EMAIL</a>
-              <a href="index.html">SIGN IN</a>
-            </div>
           </div>
-          <div class="col-lg-6 d-lg-block d-none img-bg sign-in-bg">
-            <div class="col-lg-5 slogan text-left px-0">
-              <h1 class="text-white">Slogan goes here</h1>
+          <div class="col-lg-6 d-lg-flex center-vh justify-content-start d-none img-bg sign-in-bg">
+            <div class="col-lg-8 slogan text-left px-0">
+              <h1 class="text-white">Helping great companies hire better, faster, and with greater diversity</h1>
             </div>
           </div>
         </div>

@@ -28,35 +28,37 @@
   <!-- MAIN -->
   <main>
     <!-- QUSTIONS -->
-    <section class="section">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-lg-6 px-lg-0 d-flex justify-content-center align-items-sm-center align-items-start">
-            <div class="section-nav text-left">
-              <a href="question-1.html">
-                <img src="images/back.png" alt="back">
-              </a>
-            </div>
+    <section class="section h-100">
+      <div class="container-fluid h-100">
+        <div class="row h-100">
+          <div class="col-lg-6 px-lg-0 flex-center-vh">
             <div class="col-lg-8 px-lg-0 mtsm100">
               <div class="user-details">
                 <div class="section-title mb-4 text-left">
-                  <h2 class="mb-4">Some details</h2>
+                  <h2 class="mb-4">Your company details</h2>
                 </div>
                 <form class="mb-3" action="">
                   <div class="form-group">
                     <select class="form-control" id="markets" required>
                       <option selected>Markets/Industries *</option>
-                      <option value="1">One</option>
-                      <option value="2">Two</option>
-                      <option value="3">Three</option>
+                      <option value="1">Food Delivery</option>
+                      <option value="2">Retail</option>
+                      <option value="3">Supermarkets</option>
+                      <option value="4">Restaurant</option>
+                      <option value="5">Bar/Pub</option>
                     </select>
                   </div>
                   <div class="form-group position-relative">
                     <select class="form-control custom-select-control text-dark" id="size" required>
-                      <option selected>0 - 10</option>
-                      <option value="20">0 - 20</option>
-                      <option value="30">0 - 30</option>
-                      <option value="40">0 - 40</option>
+                      <option selected>1 - 10</option>
+                      <option value="">11 - 50</option>
+                      <option value="">51 - 100</option>
+                      <option value="">101 - 250</option>
+                      <option value="">251 - 500</option>
+                      <option value="">501 - 1000</option>
+                      <option value="">1001 - 5000</option>
+                      <option value="">5001 - 10000</option>
+                      <option value="">10000+</option>
                     </select>
                     <span class="alter-text-placeholder fixed-text">Company Size *</span>
                   </div>
@@ -65,27 +67,21 @@
                       cols="50"></textarea>
                   </div>
                   <div class="form-group position-relative">
-                    <select class="form-control custom-select-control text-dark" id="location">
-                      <option selected>0 - 10</option>
-                      <option value="20">0 - 20</option>
-                      <option value="30">0 - 30</option>
-                      <option value="40">0 - 40</option>
-                    </select>
-                    <span class="alter-text-placeholder fixed-text">Location *</span>
+                    <input type="text" class="form-control custom-select-control" id="inputName" placeholder="Search by postalcode or street address" required>
+                    <span class="alter-text-placeholder fixed-text">Head Office Location *</span>
                   </div>
                 </form>
               </div>
             </div>
-            <div
-              class="section-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+            <div class="section-nav section-nav-bottom nav-three-items po-xs-initial fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
               <div class="pl-xl-5 mb-sm-0 mb-3">
                 <a href="question-1.html">BACK</a>
               </div>
               <div class="mb-sm-0 mb-3">
-                <span class="text-secondary fs16">Step <span class="initial-step">2</span> of <span class="total-steps">3</span></span>
+                <span class="text-secondary fs16">Step <span class="initial-step">2</span> of <span class="total-steps">4</span></span>
               </div>
               <div>
-                <a class="btn btn-primary btn-large" href="question-3.html">NEXT</a>
+                <a class="btn btn-primary btn-lg" href="question-3.html">NEXT</a>
               </div>
             </div>
           </div>

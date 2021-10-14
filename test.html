@@ -11,75 +11,103 @@
   <!-- STYLE -->
   <link rel="stylesheet" href="css/style.css" />
   <style>
-    .btn {
-      border: 3px solid #1a1a1a;
-      display: inline-block;
-      padding: 10px;
+    @charset "UTF-8";
+
+    .form {
+      width: 500px;
+      margin: 5% auto;
+    }
+
+    .form__container {
       position: relative;
-      text-align: center;
-      transition: background 600ms ease, color 600ms ease;
-    }
-
-    input[type=radio].toggle {
-      display: none;
-    }
-
-    input[type=radio].toggle+label {
-      cursor: pointer;
-      min-width: 60px;
-    }
-
-    input[type=radio].toggle+label:hover {
-      background: none;
-      color: #1a1a1a;
-    }
-
-    input[type=radio].toggle+label:after {
-      background: #1a1a1a;
-      content: "";
-      height: 100%;
-      position: absolute;
-      top: 0;
-      transition: left 200ms cubic-bezier(0.77, 0, 0.175, 1);
       width: 100%;
-      z-index: -1;
+      height: 200px;
+      border: 2px dashed silver;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 18px;
+      color: silver;
+      margin-bottom: 5px;
     }
 
-    input[type=radio].toggle.toggle-left+label {
-      border-right: 0;
+    .form__container.active {
+      background-color: rgba(192, 192, 192, 0.2);
     }
 
-    input[type=radio].toggle.toggle-left+label:after {
-      left: 100%;
-    }
-
-    input[type=radio].toggle.toggle-right+label {
-      margin-left: -5px;
-    }
-
-    input[type=radio].toggle.toggle-right+label:after {
-      left: -100%;
-    }
-
-    input[type=radio].toggle:checked+label {
-      cursor: default;
-      color: #fff;
-      transition: color 200ms;
-    }
-
-    input[type=radio].toggle:checked+label:after {
+    .form__file {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
       left: 0;
+      cursor: pointer;
+      opacity: 0;
+    }
+
+    .form__files-container {
+      display: block;
+      width: 100%;
+      font-size: 0;
+      margin-top: 20px;
+    }
+
+    .form__image-container {
+      display: block;
+      width: 100%;
+      height: 200px;
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .form__image-container:not(:nth-child(2n)) {
+      margin-right: 2%;
+    }
+
+    .form__image-container:after {
+    content: "✕";
+    position: absolute;
+    line-height: 0;
+    font-size: 30px;
+    margin: auto;
+    top: 630px;
+    right: 0;
+    left: 845px;
+    text-align: center;
+    font-weight: bold;
+    color: #7c1b1b;
+    background-color: rgba(0, 0, 0, 0.4);
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+    }
+
+    .form__image-container:hover:after {
+      opacity: 1;
+      cursor: pointer;
+    }
+
+    .form__image {
+      -o-object-fit: contain;
+      object-fit: contain;
+      width: 100%;
+      height: 100%;
     }
   </style>
 </head>
 
 <body>
-  <input id="toggle-on" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
-  <label for="toggle-on" class="btn">Yes</label>
-  <input id="toggle-off" class="toggle toggle-right" name="toggle" value="true" type="radio">
-  <label for="toggle-off" class="btn">No</label>
+  <form class="form">
+    <label class="form__container" id="upload-container">Choose or Drag & Drop Files
+      <input class="form__file" id="upload-files" type="file" accept="image/*" multiple="multiple" />
+    </label>
+    <ul class="form__files-container" id="files-list-container"> 
+    </ul>
+  </form>
 
-
+  <video width="400" style="pointer-events: none;">
+    <source src="video/test.mp4"  type="video/mp4">
+    Your browser does not support HTML video.
+  </video>  
   <!-- JQUERY -->
   <script src="js/jquery-3.0.0.min.js"></script>
   <!-- POOPER -->
@@ -88,6 +116,98 @@
   <script src="js/bootstrap.min.js"></script>
   <!-- APP JS -->
   <script src="js/app.js"></script>
+  <script>
+    const INPUT_FILE = document.querySelector('#upload-files');
+    const INPUT_CONTAINER = document.querySelector('#upload-container');
+    const FILES_LIST_CONTAINER = document.querySelector('#files-list-container');
+    const FILE_LIST = [];
+    let UPLOADED_FILES = [];
+
+    const multipleEvents = (element, eventNames, listener) => {
+      const events = eventNames.split(' ');
+
+      events.forEach(event => {
+        element.addEventListener(event, listener, false);
+      });
+    };
+
+    const previewImages = () => {
+      FILES_LIST_CONTAINER.innerHTML = '';
+      if (FILE_LIST.length > 0) {
+        FILE_LIST.forEach((addedFile, index) => {
+          const content = `
+        <li class="form__image-container js-remove-image" data-index="${index}">
+          <img class="form__image" src="${addedFile.url}" alt="${addedFile.name}">
+        </li>
+      `;
+
+          FILES_LIST_CONTAINER.insertAdjacentHTML('beforeEnd', content);
+        });
+      } else {
+        console.log('empty');
+        INPUT_FILE.value = "";
+      }
+    };
+
+    const fileUpload = () => {
+      if (FILES_LIST_CONTAINER) {
+        multipleEvents(INPUT_FILE, 'click dragstart dragover', () => {
+          INPUT_CONTAINER.classList.add('active');
+        });
+
+        multipleEvents(INPUT_FILE, 'dragleave dragend drop change blur', () => {
+          INPUT_CONTAINER.classList.remove('active');
+        });
+
+        INPUT_FILE.addEventListener('change', () => {
+          const files = [...INPUT_FILE.files];
+          console.log("changed");
+          files.forEach(file => {
+            const fileURL = URL.createObjectURL(file);
+            const fileName = file.name;
+            if (!file.type.match("image/")) {
+              alert(file.name + " is not an image");
+              console.log(file.type);
+            } else {
+              const uploadedFiles = {
+                name: fileName,
+                url: fileURL
+              };
+
+
+              FILE_LIST.push(uploadedFiles);
+            }
+          });
+
+          console.log(FILE_LIST); //final list of uploaded files
+          previewImages();
+          UPLOADED_FILES = document.querySelectorAll(".js-remove-image");
+          removeFile();
+        });
+      }
+    };
+
+    const removeFile = () => {
+      UPLOADED_FILES = document.querySelectorAll(".js-remove-image");
+
+      if (UPLOADED_FILES) {
+        UPLOADED_FILES.forEach(image => {
+          image.addEventListener('click', function () {
+            const fileIndex = this.getAttribute('data-index');
+
+            FILE_LIST.splice(fileIndex, 1);
+            previewImages();
+            removeFile();
+          });
+        });
+      } else {
+        [...INPUT_FILE.files] = [];
+      }
+    };
+
+    fileUpload();
+    removeFile();
+  </script>
 </body>
 
 </html>
