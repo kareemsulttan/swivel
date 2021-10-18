@@ -24,13 +24,13 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 
-<body class="register-phase">
+<body>
   <!-- MAIN -->
   <main>
     <!-- Modal -->
     <div class="modal fade" id="terms" tabindex="-1" aria-labelledby="modal" aria-hidden="true">
       <div class="modal-dialog m-0 w-100" style="max-width: initial;">
-        <div class="modal-content">
+        <div class="modal-content" style="border-radius: 24px;">
           <div class="modal-header mt-sm-0 mt-4 border-0 pt-5 flex-column align-items-center">
             <div class="toggle-terms mb-3">
               <input id="terms-and-conditions" class="toggle toggle-left" name="toggle" value="false" type="radio" checked>
@@ -139,16 +139,29 @@
               </div>
               <div class="user-details">
                 <form class="mb-3" action="">
-                  <div class="form-group">
-                    <input type="email" class="form-control" id="inputName"
-                      placeholder="Type your email or phone number" required>
+                  <div class="flex-center-vh">
+                    <div class="form-group w-50 position-relative">
+                      <input type="text" class="form-control custom-select-control text-dark" id="inputName" placeholder="John">
+                      <span class="alter-text-placeholder fixed-text">First Name</span>
+                    </div>
+                    <div class="form-group w-50 position-relative">
+                      <input type="text" class="form-control custom-select-control text-dark" id="inputName" placeholder="Doe">
+                      <span class="alter-text-placeholder fixed-text">Last Name</span>
+                    </div>
                   </div>
                   <div class="form-group position-relative">
-                    <input type="password" class="form-control" id="password" placeholder="Enter your password"
-                      required>
+                    <input type="email" class="form-control custom-select-control" id="inputName" placeholder="example@email.com">
+                      <span class="alter-text-placeholder fixed-text">Email</span>
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="password" class="form-control" id="password" placeholder="Enter your password">
                     <span class="input-img pr-3" onclick="showPass()">
                       <img src="images/eye-hide.png" alt="eye">
                     </span>
+                  </div>
+                  <div class="form-group position-relative">
+                    <input type="number" class="form-control custom-select-control" id="inputName" placeholder="636 665 254">
+                      <span class="alter-text-placeholder fixed-text">Phone Number</span>
                   </div>
                   <div class="d-flex align-items-center mb-3">
                     <label class="switch mb-0 mr-2">
@@ -159,7 +172,7 @@
                         data-target="#terms">Privacy Policy</a> and <a href="#" data-toggle="modal"
                         data-target="#terms">Terms of use</a></span>
                   </div>
-                  <button class="btn btn-primary btn-lg">REGISTER</button>
+                  <a class="btn btn-primary btn-lg" href="setup-company-profile.html">REGISTER</a>
                 </form>
                 <div class="social-links">
                   <p class="text-secondary fs12">OR CONTINUE WITH</p>

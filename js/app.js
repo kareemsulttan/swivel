@@ -183,3 +183,90 @@ $('.nav-close-btn').on('click', function () {
 
   fileUpload();
   removeFile();
+
+/**
+ * CHART JS
+ */
+ var charts = document.getElementsByClassName('chart')
+ for (chart of charts) {
+   var ctx = chart.getContext('2d');
+   gradient = ctx.createLinearGradient(0, 0, 0, 50);
+   gradient.addColorStop(0, 'rgba(240, 113, 103, 0.5)');
+   gradient.addColorStop(0.5, 'rgba(240, 113, 103, 0.25)');
+   gradient.addColorStop(1, 'rgba(240, 113, 103, 0)');
+   var data = {
+     labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+     datasets: [{
+       label: 'Custom Label Name',
+       backgroundColor: gradient,
+       pointBackgroundColor: 'white',
+       borderWidth: 6,
+       borderColor: '#F07167',
+       data: [50, 55, 65, 56, 54, 50]
+     }]
+   };
+   var options = {
+     responsive: true,
+     maintainAspectRatio: false,
+     animation: {
+       easing: 'easeInOutQuad',
+       duration: 520
+     },
+     scales: {
+       xAxes: [{
+         gridLines: {
+           color: 'rgba(200, 200, 200, 0)',
+           lineWidth: 5,
+           display: false,
+         },
+         ticks: {
+           display: false
+         }
+       }],
+       yAxes: [{
+         gridLines: {
+           color: 'rgba(200, 200, 200, 0)',
+           lineWidth: 5,
+           display: false
+         },
+         ticks: {
+           display: false
+         }
+       }]
+     },
+     elements: {
+       line: {
+         tension: 0.4
+       },
+       point: {
+         radius: 0
+       }
+     },
+     legend: {
+       display: false
+     },
+     point: {
+       radius: 0
+     },
+     tooltips: {
+       backgroundColor: 'rgba(0,0,0,0.3)',
+       titleFontColor: 'red',
+       caretSize: 5,
+       cornerRadius: 2,
+       xPadding: 10,
+       yPadding: 10
+     }
+   };
+   var chartInstance = new Chart(ctx, {
+     type: 'line',
+     data: data,
+     options: options
+   });
+ }
+
+ const candidateSearch = document.querySelector('.candidate-search .form-group');
+ const candidateSearchWidth = candidateSearch.offsetWidth;
+ const candidatedropDown = document.querySelector('.candidate-search .form-group .dropdown .dropdown-menu');
+ candidatedropDown.style.width = candidateSearchWidth + "px";
+ console.log(candidatedropDown)
+

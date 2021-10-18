@@ -1,0 +1,772 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Jobs Directory</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
+  <meta name="author" content="Swivel" />
+  <meta name="email" content="" />
+  <meta name="website" content="" />
+  <meta name="Version" content="" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- ROBOTO FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-light">
+  <!-- Modal STEP 1 -->
+
+  <div class="modal right fade" id="job-1" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">New job</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title">
+            <h2>Job description</h2>
+          </div>
+          <form action="">
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="inputName"
+                placeholder="Barista" required>
+              <span class="alter-text-placeholder fixed-text">Title / Role</span>
+            </div>
+            <div class="input-group mb-3">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Description" rows="18"
+                cols="50"></textarea>
+            </div>
+            <div class="form-group position-relative">
+              <select class="form-control custom-select-control text-dark" id="size" required>
+                <option selected>5</option>
+                <option value="20">0 - 20</option>
+                <option value="30">0 - 30</option>
+                <option value="40">0 - 40</option>
+              </select>
+              <span class="alter-text-placeholder fixed-text">Amount of Vacations</span>
+            </div>
+          </form>
+        </div>
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">1</span> of <span
+                class="total-steps">4</span></span>
+          </div>
+          <div>
+            <a class="btn btn-primary btn-lg" data-dismiss="modal" href="#job-2" data-toggle="modal">NEXT</a>
+          </div>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+  <!-- Modal STEP 2 -->
+
+  <div class="modal right fade" id="job-2" tabindex="-1" role="dialog" aria-labelledby="job-2Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">New job</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title">
+            <h2>Job location</h2>
+          </div>
+          <form action="">
+            <div class="form-group has-search position-relative mb-3">
+              <span class="input-img input-img-left pl-3">
+                <img src="images/search.png" alt="search">
+              </span>
+              <input type="text" class="form-control pl-5" placeholder="Search">
+              <span class="input-img pr-3">
+                <img src="images/clear-search.png" alt="clear-search">
+              </span>
+            </div>
+            <ul class="list-unstyled text-secondary">
+              <li class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="location1" name="location">
+                <label class="custom-control-label" for="location1"><img class="pr-3" src="images/location-checked.png"
+                    alt="location"> Location 01</label>
+              </li>
+              <li class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="location2" name="location">
+                <label class="custom-control-label" for="location2"><img class="pr-3" src="images/location-checked.png"
+                    alt="location"> Location 01</label>
+              </li>
+              <li class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="location3" name="location">
+                <label class="custom-control-label" for="location3"><img class="pr-3" src="images/location-checked.png"
+                    alt="location"> Location 01</label>
+              </li>
+              <li class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="location4" name="location">
+                <label class="custom-control-label" for="location4"><img class="pr-3" src="images/location-checked.png"
+                    alt="location"> Location 01</label>
+              </li>
+              <li class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="location5" name="location">
+                <label class="custom-control-label" for="location5"><img class="pr-3" src="images/location-checked.png"
+                    alt="location"> Location 01</label>
+              </li>
+              <li class="custom-control custom-radio">
+                <input type="radio" class="custom-control-input" id="location6" name="location">
+                <label class="custom-control-label" for="location6"><img class="pr-3" src="images/location-checked.png"
+                    alt="location"> Location 01</label>
+              </li>
+            </ul>
+          </form>
+        </div>
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#job-1" data-dismiss="modal" data-toggle="modal">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">2</span> of <span
+                class="total-steps">4</span></span>
+          </div>
+          <div>
+            <a class="btn btn-primary btn-lg" data-dismiss="modal" href="#job-3" data-toggle="modal">NEXT</a>
+          </div>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+  <!-- Modal STEP 3 -->
+
+  <div class="modal right fade" id="job-3" tabindex="-1" role="dialog" aria-labelledby="job-3Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span data-toggle="modal"
+              data-target="#job-message" aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">New job</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title">
+            <h2>Type</h2>
+          </div>
+          <div class="job-type mb-5">
+            <ul class="list-unstyled d-flex">
+              <li class="active"><a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Full
+                  time</a></li>
+              <li><a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Part time</a></li>
+              <li><a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Days</a></li>
+            </ul>
+          </div>
+          <div class="modal-title">
+            <h2>Salary</h2>
+          </div>
+          <form action="">
+            <div class="form-group position-relative">
+              <select class="form-control custom-select-control text-dark" id="currency" required>
+                <option selected>EUR €</option>
+                <option value="20">USD $</option>
+                <option value="30">GBP £</option>
+              </select>
+              <span class="alter-text-placeholder fixed-text">Currency *</span>
+            </div>
+            <div class="d-flex flex-md-nowrap flex-wrap justify-content-between">
+              <div class="form-group position-relative w-100 mr-md-2 mr-0">
+                <input type="text" class="form-control custom-select-control text-dark" id="from" placeholder="0 €"
+                  required>
+                <span class="alter-text-placeholder fixed-text">From</span>
+              </div>
+              <div class="form-group position-relative w-100 mr-md-2 mr-0">
+                <input type="text" class="form-control custom-select-control text-dark" id="to" placeholder="0 €"
+                  required>
+                <span class="alter-text-placeholder fixed-text">To</span>
+              </div>
+              <div class="form-group position-relative w-100">
+                <select class="form-control custom-select-control text-dark" id="currency" required>
+                  <option selected>Per hour</option>
+                  <option value="example1">example</option>
+                  <option value="example2">example</option>
+                </select>
+                <span class="alter-text-placeholder fixed-text">Frequency</span>
+              </div>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control text-dark" id="from" placeholder="Tips, comision..." required>
+            </div>
+          </form>
+        </div>
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#job-2" data-dismiss="modal" data-toggle="modal">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">3</span> of <span
+                class="total-steps">4</span></span>
+          </div>
+          <div>
+            <a class="btn btn-primary btn-lg" href="#job-4" data-dismiss="modal" data-toggle="modal">NEXT</a>
+          </div>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+  <!-- Modal Message -->
+
+  <div class="modal right fade" id="job-message" tabindex="-1" role="dialog" aria-labelledby="job-messageLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Important</h4>
+        </div>
+        <div class="modal-body text-center flex-center-vh">
+          <div class="container-fluid">
+            <div class="row center-vh">
+              <div class="col-lg-12 p-0">
+                <div class="user-details">
+                  <img class="mb-5" src="images/exit.png" alt="exit">
+                  <h3 class="fs24 mb-3">Are you sure?</h3>
+                  <p class="mb-4">This action cannot be undone, if you exitall the information will be deleted.</p>
+                  <a href="#job-4" class="btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal">CONTINUE
+                    CREATING THE JOB</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-nav modal-nav section-nav-bottom fsxs12 flex-center-vh py-3">
+          <a href="#" data-dismiss="modal">EXIT</a>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+  <!-- Modal STEP 4 -->
+
+  <div class="modal right fade" id="job-4" tabindex="-1" role="dialog" aria-labelledby="job-4Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span data-toggle="modal"
+              data-target="#job-message" aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">New job</h4>
+        </div>
+        <div class="modal-body pb-3">
+          <div class="modal-title">
+            <h2 class="mb-3 pb-3">Upload videos</h2>
+            <p class="fs14 font-weight-normal">Upload several videos where you explain in a clear and simple way the
+              offer so that candidates are interested in your job offer.</p>
+          </div>
+          <div class="upload-vedios-container">
+            <form>
+              <label class="form__container flex-center-vh" id="upload-container">
+                <span class="font-weight-normal">
+                  <span class="d-block w-100 text-center mb-4">
+                    <img src="images/drag-drop-upload.png" alt="drag-drop-upload">
+                  </span>
+                  Drop your video here, or <span class="text-danger ml-1"> browse</span>
+                </span>
+                <input class="form__file" id="upload-files" type="file" accept="video/*" multiple="multiple" />
+              </label>
+              <h4 class="text-muted fs14 mt-2 pt-2 mb-3">Uploaded videos</h4>
+              <ul class="form__files-container" id="files-list-container">
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div class="fs14 text-center text-primary"><a href="#">SKIP & SAVE</a></div>
+        <div class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#job-2" data-dismiss="modal" data-toggle="modal">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">4</span> of <span
+                class="total-steps">4</span></span>
+          </div>
+          <div>
+            <a href="job-created.html" class="btn btn-primary btn-lg">NEXT</a>
+          </div>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+  <!-- DASHBOARD -->
+
+  <main id="app">
+    <div id="wrapper">
+
+      <!-- SIDEBAR -->
+
+      <nav id="sidebar" class="p-3">
+        <div class="nav-header d-md-block d-none">
+          <div class="brand">
+            <a href="#">
+              <img class="w-100" src="images/logo.png" alt="logo">
+            </a>
+          </div>
+        </div>
+        <div class="nav-components">
+          <ul class="list-unstyled d-md-block d-flex justify-content-around mb-0">
+            <li class="nav-item mb-md-3 mb-0">
+              <a href="#" class="nav-link active">
+                <span class="nav-icons">
+                  <img class="active-icon" src="images/dashboard/jobs-active.png" alt="jobs">
+                  <img class="current-icon" src="images/dashboard/jobs-default.png" alt="jobs">
+                </span>
+                <span class="nav-anchor d-md-block d-none">JOBS</span>
+              </a>
+            </li>
+            <li class="nav-item mb-md-3 mb-0">
+              <a href="#" class="nav-link">
+                <span class="nav-icons">
+                  <img class="active-icon" src="images/dashboard/company-active.png" alt="company">
+                  <img class="current-icon" src="images/dashboard/company-default.png" alt="company">
+                </span>
+                <span class="nav-anchor d-md-block d-none">COMPANY</span>
+              </a>
+            </li>
+            <li class="nav-item mb-md-3 mb-0">
+              <a href="#" class="nav-link">
+                <span class="nav-icons">
+                  <img class="active-icon" src="images/dashboard/account-active.png" alt="account">
+                  <img class="current-icon" src="images/dashboard/account-default.png" alt="account">
+                </span>
+                <span class="nav-anchor d-md-block d-none">MY ACCOUNT</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer position-absolute d-md-block d-none" style="bottom: 1rem;">
+          <button class="btn nav-close-btn p-0 flex-center-vh" onclick="chngimg()">
+            <img id="nav-open" src="images/hamburger.png" alt="hamburger">
+            <span class="nav-anchor fs16">Close</span>
+          </button>
+        </div>
+      </nav>
+
+      <!-- APP BODY -->
+
+      <div id="app-body" class="d-flex flex-column p-3">
+
+        <!-- ALERT -->
+
+        <div class="alert alert-success flex-center-vh justify-content-between fsxs14 mb-4 fade d-none" role="alert">
+          <span> <strong>Success.</strong>The job has been created.</span>
+          <button type="button" class="align-items-center close btn d-flex h-100 py-0 ml-3" data-dismiss="alert"
+            aria-label="Close" style="opacity: inherit;">
+            <img src="images/close-white.png" alt="close">
+          </button>
+        </div>
+
+        <!-- HEADER -->
+
+        <header class="app-header mb-4">
+
+          <!-- APP BODY NAV -->
+
+          <nav class="app-body-nav d-flex justify-content-between">
+            <button class="btn btn-transparent p-0 fsxs12">
+              <a href="message.html" class="text-muted flex-center-vh">
+                <img src="images/jobs-icon.png" class="mr-sm-4 mr-2" alt="back">
+                <span>Posted jobs</span>
+              </a>
+            </button>
+            <a href="#job-1" class="btn btn-secondary btn-md flex-center-vh fsxs12" data-toggle="modal">
+              <img src="images/plus.png" alt="plus" style="margin-right: 12px;">
+              <span style="line-height: 16px;">NEW JOB</span>
+            </a>
+          </nav>
+        </header>
+
+        <!-- RESUME -->
+
+        <section class="app-content resume bg-white">
+          <div class="section-header mb-4 flex-center-vh justify-content-between">
+            <div class="section-title">
+              <h2 class="fs24">Resume</h2>
+            </div>
+            <div class="right-section-nav">
+              <div class="dropdown">
+                <a href="" class="dropdown-toggle fs14" type="button" id="nav-dropdown" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  LAST MONTH
+                </a>
+                <div class="dropdown-menu" aria-labelledby="nav-dropdown">
+                  <a class="dropdown-item" href="#">Action</a>
+                  <a class="dropdown-item" href="#">Another action</a>
+                  <a class="dropdown-item" href="#">Something else here</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="section-content">
+            <div class="container-fluid">
+              <div class="row justify-content-between">
+                <div class="col-lg-3 col-sm-6 mb-xl-0 mb-4 p-0">
+                  <div class="job-chart-details flex-center-vh justify-content-start">
+                    <div class="chart-details text-left">
+                      <div>
+                        <h4 class="text-secondary fs16 font-weight-normal">Total jobs</h4>
+                      </div>
+                      <div>
+                        <h2>42</h2>
+                      </div>
+                      <div>
+                        <h5 class="font-weight-bold text-success fs16">+20%</h5>
+                      </div>
+                    </div>
+                    <div class="job-chart">
+                      <canvas class="chart"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-xl-0 mb-4 p-0">
+                  <div class="job-chart-details flex-center-vh justify-content-start">
+                    <div class="chart-details text-left">
+                      <div>
+                        <h4 class="text-secondary fs16 font-weight-normal">Total applied</h4>
+                      </div>
+                      <div>
+                        <h2>567</h2>
+                      </div>
+                      <div>
+                        <h5 class="font-weight-bold text-success fs16">+200%</h5>
+                      </div>
+                    </div>
+                    <div class="job-chart">
+                      <canvas class="chart"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 mb-md-0 mb-4 p-0">
+                  <div class="job-chart-details flex-center-vh justify-content-start">
+                    <div class="chart-details text-left">
+                      <div>
+                        <h4 class="text-secondary fs16 font-weight-normal">interviwed</h4>
+                      </div>
+                      <div>
+                        <h2>10</h2>
+                      </div>
+                      <div>
+                        <h5 class="font-weight-bold text-danger fs16">-5%</h5>
+                      </div>
+                    </div>
+                    <div class="job-chart">
+                      <canvas class="chart"></canvas>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-3 col-sm-6 p-0">
+                  <div class="job-chart-details flex-center-vh justify-content-start">
+                    <div class="chart-details text-left">
+                      <div>
+                        <h4 class="text-secondary fs16 font-weight-normal">Hired</h4>
+                      </div>
+                      <div>
+                        <h2>2</h2>
+                      </div>
+                      <div>
+                        <h5 class="font-weight-bold text-success fs16">+100%</h5>
+                      </div>
+                    </div>
+                    <div class="job-chart">
+                      <canvas class="chart"></canvas>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- OPEN JOBS LIST -->
+
+        <section class="app-content open-jobs bg-white">
+          <div class="section-header">
+            <ul class="nav nav-tabs mb-3" id="jobs-tab" role="tablist">
+              <li class="nav-item">
+                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#open-jobs" role="tab"
+                  aria-controls="home" aria-selected="true">Open jobs</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#closed-jobs" role="tab"
+                  aria-controls="profile" aria-selected="false">Closed jobs</a>
+              </li>
+            </ul>
+          </div>
+          <div class="section-content">
+            <div class="tab-content" id="jobs-tab">
+              <div class="tab-pane fade show active" id="open-jobs" role="tabpanel" aria-labelledby="home-tab">
+                <!-- JOBS FILTER -->
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="jobs-filter-container mb-3 pb-3 w-100">
+                      <form action="" class="w-100 flex-center-vh jobs-filter justify-content-between">
+                        <div class="form-group has-search position-relative" style="max-width: 240px;">
+                          <span class="input-img input-img-left pl-3">
+                            <img src="images/search.png" alt="search">
+                          </span>
+                          <input type="text" class="form-control pl-5" placeholder="All">
+                        </div>
+                        <div class="form-group position-relative" style="max-width: 144px;">
+                          <select class="form-control custom-select-control text-dark" id="type" required>
+                            <option selected>Full time</option>
+                            <option value="">Part time</option>
+                            <option value="">Days</option>
+                          </select>
+                          <span class="alter-text-placeholder fixed-text">Type</span>
+                        </div>
+                        <div class="form-group position-relative" style="max-width: 136px;">
+                          <select class="form-control custom-select-control text-dark" id="status" required>
+                            <option selected>Open</option>
+                            <option value="">Part time</option>
+                            <option value="">Days</option>
+                          </select>
+                          <span class="alter-text-placeholder fixed-text">Status</span>
+                        </div>
+                        <div class="form-group position-relative" style="max-width: 176px;">
+                          <select class="form-control custom-select-control text-dark" id="experience" required>
+                            <option selected>0 - 5</option>
+                            <option value="">5 - 10</option>
+                            <option value="">10+</option>
+                          </select>
+                          <span class="alter-text-placeholder fixed-text">Experience (Years)</span>
+                        </div>
+                        <div class="form-group position-relative" style="max-width: 144px;">
+                          <select class="form-control custom-select-control text-dark" id="distance" required>
+                            <option selected>0 - 10km</option>
+                            <option value="">0 - 10km</option>
+                            <option value="">0 - 10km</option>
+                          </select>
+                          <span class="alter-text-placeholder fixed-text">Distance</span>
+                        </div>
+                        <div class="form-group position-relative" style="max-width: 168px;">
+                          <select class="form-control custom-select-control text-dark" id="availaility" required>
+                            <option selected>Day</option>
+                            <option value="">Day</option>
+                            <option value="">Day</option>
+                          </select>
+                          <span class="alter-text-placeholder fixed-text">Current availaility</span>
+                        </div>
+                        <button class="btn btn-secondary btn-md flex-center-vh mb-3 fsxs12"
+                          style="max-height: 56px!important;height: 56px; max-width: 144px;">
+                          APPLY
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+                <!-- JOBS LIST -->
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="w-100 jobs-list-contsiner">
+                      <ul class="list-unstyled">
+                        <li class="flex-center-vh flex-lg-row flex-column">
+                          <div class="job-video mb-lg-0 mb-4">
+                            <div class="card border-0">
+                              <div class="row no-gutters align-items-center">
+                                <div class="video-img mb-sm-0 mb-3 mr-4 flex-center-vh">
+                                  <img src="images/video-img.png" class="card-img" alt="video-img">
+                                </div>
+                                <div class="card-body p-0 text-left">
+                                  <h2 class="fs16 mb-2">Barista</h2>
+                                  <h2 class="salary text-secondary font-weight-normal mb-1 fs14">$<span
+                                      class="hour-rate">50-70</span><span>/year</span>
+                                  </h2>
+                                  <div class="text-secondary fs12 font-weight-normal">
+                                    <span class="location-text mr-2">Location</span>
+                                    <span class="distance"><img class="mr-1" src="images/location-distance.png"
+                                        alt="location-distance" style="vertical-align: baseline;">1.1km</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="views text-secondary fs12 flex-center-vh ml-4 d-xl-flex d-none mb-lg-0 mb-4">
+                            <span class="flex-center-vh mr-4">
+                              <span class="mr-2"><img src="images/eye-show.png" alt="eye"></span>
+                              <span class="number-of-views mr-1">124</span>
+                              <span>Views</span>
+                            </span>
+                            <span class="flex-center-vh">
+                              <span class="mr-2"><img src="images/calendar.png" alt="calendar"></span>
+                              <span class="date">Publised 23 days ago</span>
+                            </span>
+                          </div>
+                          <div
+                            class="job-report flex-center-vh text-muted font-weight-bold fs14 mr-0 ml-0 mr-lg-5 ml-lg-4">
+                            <span class="total-applied pl-sm-2">Applied<span
+                                class="badge badge-muted text-white fs14 ml-2">345</span></span>
+                            <span class="total-hired ml-sm-4 pl-2">Hired<span
+                                class="badge badge-muted text-white fs14 ml-2">8</span></span>
+                            <span class="total-denied ml-sm-4 pl-2">Denied<span
+                                class="badge badge-muted text-white fs14 ml-2">2/4</span></span>
+                          </div>
+                          <div class="right-section-nav">
+                            <div class="dropdown pl-2" style="line-height: 0;">
+                              <a href="" class="dropdown-toggle dots fs14 py-2" type="button" id="nav-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex-center-vh flex-lg-row flex-column">
+                          <div class="job-video mb-lg-0 mb-4">
+                            <div class="card border-0">
+                              <div class="row no-gutters align-items-center">
+                                <div class="video-img mb-sm-0 mb-3 mr-4 flex-center-vh">
+                                  <img src="images/video-img.png" class="card-img" alt="video-img">
+                                </div>
+                                <div class="card-body p-0 text-left">
+                                  <h2 class="fs16 mb-2">Barista</h2>
+                                  <h2 class="salary text-secondary font-weight-normal mb-1 fs14">$<span
+                                      class="hour-rate">50-70</span><span>/year</span>
+                                  </h2>
+                                  <div class="text-secondary fs12 font-weight-normal">
+                                    <span class="location-text mr-2">Location</span>
+                                    <span class="distance"><img class="mr-1" src="images/location-distance.png"
+                                        alt="location-distance" style="vertical-align: baseline;">1.1km</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="views text-secondary fs12 flex-center-vh ml-4 d-xl-flex d-none mb-lg-0 mb-4">
+                            <span class="flex-center-vh mr-4">
+                              <span class="mr-2"><img src="images/eye-show.png" alt="eye"></span>
+                              <span class="number-of-views mr-1">124</span>
+                              <span>Views</span>
+                            </span>
+                            <span class="flex-center-vh">
+                              <span class="mr-2"><img src="images/calendar.png" alt="calendar"></span>
+                              <span class="date">Publised 23 days ago</span>
+                            </span>
+                          </div>
+                          <div
+                            class="job-report flex-center-vh text-muted font-weight-bold fs14 mr-0 ml-0 mr-lg-5 ml-lg-4">
+                            <span class="total-applied pl-sm-2">Applied<span
+                                class="badge badge-muted text-white fs14 ml-2">345</span></span>
+                            <span class="total-hired ml-sm-4 pl-2">Hired<span
+                                class="badge badge-muted text-white fs14 ml-2">8</span></span>
+                            <span class="total-denied ml-sm-4 pl-2">Denied<span
+                                class="badge badge-muted text-white fs14 ml-2">2/4</span></span>
+                          </div>
+                          <div class="right-section-nav">
+                            <div class="dropdown pl-2" style="line-height: 0;">
+                              <a href="" class="dropdown-toggle dots fs14 py-2" type="button" id="nav-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                        <li class="flex-center-vh flex-lg-row flex-column">
+                          <div class="job-video mb-lg-0 mb-4">
+                            <div class="card border-0">
+                              <div class="row no-gutters align-items-center">
+                                <div class="video-img mb-sm-0 mb-3 mr-4 flex-center-vh">
+                                  <img src="images/video-img.png" class="card-img" alt="video-img">
+                                </div>
+                                <div class="card-body p-0 text-left">
+                                  <h2 class="fs16 mb-2">Barista</h2>
+                                  <h2 class="salary text-secondary font-weight-normal mb-1 fs14">$<span
+                                      class="hour-rate">50-70</span><span>/year</span>
+                                  </h2>
+                                  <div class="text-secondary fs12 font-weight-normal">
+                                    <span class="location-text mr-2">Location</span>
+                                    <span class="distance"><img class="mr-1" src="images/location-distance.png"
+                                        alt="location-distance" style="vertical-align: baseline;">1.1km</span>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="views text-secondary fs12 flex-center-vh ml-4 d-xl-flex d-none mb-lg-0 mb-4">
+                            <span class="flex-center-vh mr-4">
+                              <span class="mr-2"><img src="images/eye-show.png" alt="eye"></span>
+                              <span class="number-of-views mr-1">124</span>
+                              <span>Views</span>
+                            </span>
+                            <span class="flex-center-vh">
+                              <span class="mr-2"><img src="images/calendar.png" alt="calendar"></span>
+                              <span class="date">Publised 23 days ago</span>
+                            </span>
+                          </div>
+                          <div
+                            class="job-report flex-center-vh text-muted font-weight-bold fs14 mr-0 ml-0 mr-lg-5 ml-lg-4">
+                            <span class="total-applied pl-sm-2">Applied<span
+                                class="badge badge-muted text-white fs14 ml-2">345</span></span>
+                            <span class="total-hired ml-sm-4 pl-2">Hired<span
+                                class="badge badge-muted text-white fs14 ml-2">8</span></span>
+                            <span class="total-denied ml-sm-4 pl-2">Denied<span
+                                class="badge badge-muted text-white fs14 ml-2">2/4</span></span>
+                          </div>
+                          <div class="right-section-nav">
+                            <div class="dropdown pl-2" style="line-height: 0;">
+                              <a href="" class="dropdown-toggle dots fs14 py-2" type="button" id="nav-dropdown"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              </a>
+                              <div class="dropdown-menu" aria-labelledby="nav-dropdown">
+                                <a class="dropdown-item" href="#">Action</a>
+                                <a class="dropdown-item" href="#">Another action</a>
+                                <a class="dropdown-item" href="#">Something else here</a>
+                              </div>
+                            </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="tab-pane fade" id="closed-jobs" role="tabpanel" aria-labelledby="profile-tab">
+                <h1>Colsed Jobs</h1>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+
+  <!-- JQUERY -->
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <!-- POOPER -->
+  <script src="js/popper.min.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- CHART JS -->
+  <script src="js/chart.min.js"></script>
+  <!-- APP JS -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>
