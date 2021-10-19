@@ -295,5 +295,11 @@ candidateVideo.forEach(function (c) {
     })
   })
 })
+const denyBtn = document.getElementById("deny");
+const denyAlert = document.getElementById("deny-alert");
 
+denyBtn.addEventListener('click', function(){
+  denyAlert.classList.remove('d-none', 'fade');
+  this.disabled = true
+})
 
