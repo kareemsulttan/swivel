@@ -35,7 +35,7 @@ Date            :  10/5/2021
  * ============================================ */
 
 /*FONT SIZE*/
-
+  .fs10 {font-size: .625rem;}
   .fs12 {font-size: .75rem;}
   .fs14 {font-size: .875rem;}
   .fs16 {font-size: 1rem;}
@@ -124,8 +124,8 @@ html, body {
 .h3, h3 {font-size: 1.125rem;}
 p { color: var(--secondary); font-weight: normal; }
 a { color: var(--primary); }
-a:hover { text-decoration: none; color: var(--dark); }
-
+a:hover { text-decoration: none; color: var(--dark) }
+a.text-primary:focus, a.text-primary:hover { text-decoration: none; color: var(--dark)!important; }
 /*ALERTS*/
 
 .alert {
@@ -277,6 +277,8 @@ span.alter-text-placeholder.fixed-text {
 .btn-transparent {background-color: transparent;}
 .btn-lg {width: var(--full-percent);}
 .btn-md {padding: 1rem 1.5rem;}
+.btn-light {background-color: var(--light); color: var(--primary);}
+.btn-danger,.btn-danger:hover,.btn-danger:not(:disabled):not(.disabled):active {background-color: var(--danger); color: var(--white);}
 
 /*DROP DOWN*/
 
@@ -871,15 +873,20 @@ transition: opacity 0.2s ease-in-out;
 
 /*CANDIDATE VIDEO TAB*/
 .candidate-video .nav-tabs {
-  margin-top: -70px;
-  padding-bottom: 26px;
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
 }
 .nav-tabs .nav-item .nav-link.candidate-video-tab {
   padding-left: 0;
   padding-right: 0;
   font-weight: bold;
+  box-shadow: inset 0px -4px 0px rgb(255 255 255 / 40%);
 }
-.nav-tabs .nav-item.show .nav-link.candidate-video-tab, .nav-tabs .nav-link.candidate-video-tab.active {
+.nav-tabs .nav-item.show .nav-link.candidate-video-tab, .nav-tabs .nav-link.candidate-video-tab.active,
+.nav-tabs .nav-link.candidate-video-tab:hover {
   box-shadow: inset 0px -4px 0px var(--white);
   background-color: transparent;
   color: var(--white);
@@ -888,22 +895,66 @@ transition: opacity 0.2s ease-in-out;
   position: relative;
   overflow: hidden;
   border-radius: 1rem;
-  min-height: 600px;
-  background-color: var(--light);
+  background: linear-gradient(180deg, #f6f6fa 80.97%, rgb(0 0 0 / 67%) 90.91%);
 }
-.tab-pane.candidate-video-container > img,
-.tab-pane.candidate-video-container > video {width: 100%;}
-.tab-overlay {
+.tab-pane.candidate-video-container,.tab-video {
+  min-height: 650px;
+  max-height: 700px;
+}
+.tab-video {
+  width: 100%;
+  object-fit: cover;
+  cursor: pointer;
+  position: relative;
+}
+.play-video {
   position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: linear-gradient(360deg, rgba(17, 13, 53, 0) 80.97%, rgba(17, 13, 53, 0.4) 90.91%);
-  transform: rotate(-180deg);
+  bottom: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
 }
 
+/*CANDIDATE INFO TAB*/
 
+.candidate-status-search .dropdown .dropdown-toggle::after {
+  content: url(../images/down-white.png);
+  position: absolute;
+  right: 25px;
+}
+.candidate-status-search .dropdown.show .dropdown-toggle::after {
+  content: url(../images/up-white.png);
+}
+.candidate-status-search .dropdown .dropdown-menu {
+  top: 45px!important;
+  width: calc(100% - 25px)!important;
+}
+.candidate-status-search .dropdown .dropdown-menu .dropdown-item:hover {
+  background-color: rgba(248, 223, 221, 1);
+  color: var(--danger);
+}
+.candidate-status-search .btn.show {
+  border-radius: 32px 32px 0px 0px;
+}
+
+/*CANDIDATE RESUME TAB*/
+
+.candidate-resume-tab .nav-tabs {
+  background-color: var(--light);
+  border-radius: 100px;
+  padding: 5px;
+}
+.candidate-resume-tab .nav-tabs .nav-item .nav-link {
+  font-size: .75rem;
+  color: var(--secondary);
+  margin: 0;
+  border-radius: 50px;
+  box-shadow: none;
+  padding: .6rem 2rem;
+}
+.candidate-resume-tab .nav-tabs .nav-item .nav-link.active {
+  color: var(--primary);
+}
 
 
 
@@ -962,7 +1013,11 @@ transition: opacity 0.2s ease-in-out;
   }
  }
 
-@media(max-width:992px) {}
+ @media screen and (max-width: 1400px) and (min-width: 1200px) {
+  .candidate-resume-tab .nav-tabs .nav-item .nav-link {
+    padding: .6rem 1rem;
+  }
+ }
 
 @media(max-width:767px) {
   #sidebar {
@@ -973,6 +1028,9 @@ transition: opacity 0.2s ease-in-out;
     display: table;
   }
   .modal.right .modal-dialog {width: 80%;}
+  .tab-pane.candidate-video-container,.tab-pane.candidate-video-container > video  {
+    min-height: 100vw;
+  }
 }
  @media(max-width:575px) {
   .mtsm100 {margin-top: 100px;}
@@ -988,6 +1046,14 @@ transition: opacity 0.2s ease-in-out;
   .modal.right .modal-dialog {width: 100%;}
   .jobs-filter > * {
     width: calc(50% - 10px);
+  }
+  .candidate-resume-tab .nav-tabs {
+    border-radius: 25px;
+  }
+  .candidate-resume-tab .nav-tabs .nav-item,.candidate-resume-tab .nav-tabs .nav-item .nav-link {
+    width: 100%;
+    text-align: center;
+    display: block;
   }
  }
  
@@ -1010,6 +1076,7 @@ transition: opacity 0.2s ease-in-out;
     font-size: .675rem;
   }
   .job-report span .badge {padding: 5px;}
+  .candidate-video .nav-tabs {bottom: 15px;}
  }
  @media(max-width:350px) {
   .jobs-list-contsiner ul li {
