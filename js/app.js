@@ -264,6 +264,18 @@ for (chart of charts) {
   });
 }
 
+const companyVideo = document.querySelectorAll('.comapny-pane-video');
+companyVideo.forEach(function(f){
+  const thisCompanyVideo = f.querySelector('.tab-video');
+  thisCompanyVideo.addEventListener('click', function(){
+    if(this.play === true) {
+      this.pause();
+    }else {
+      this.play();
+    }
+  })
+})
+
 // set the dropdown menu width as the search input width
 const candidateSearch = document.querySelector('.candidate-search .form-group');
 const candidateSearchWidth = candidateSearch.offsetWidth;
@@ -275,7 +287,7 @@ const candidateVideo = document.querySelectorAll('.candidate-video-container');
 candidateVideo.forEach(function (c) {
   const playVideo = c.querySelector('.tab-video');
   const playBtn = c.querySelector('.play-video');
-  playVideo.onended = function() {
+  playVideo.onended = function () {
     playBtn.style.display = "block"
   }
   playBtn.addEventListener('click', function () {
@@ -285,21 +297,40 @@ candidateVideo.forEach(function (c) {
     } else {
       playVideo.play();
       playBtn.style.display = "none"
-    } 
-    playVideo.addEventListener('click',function(){
-      if(this.paused === false){
+    }
+    playVideo.addEventListener('click', function () {
+      if (this.paused === false) {
         this.pause();
         playBtn.style.display = "block"
         console.log("works")
       }
     })
   })
-})
-const denyBtn = document.getElementById("deny");
+});
+
+
+
+
+
+
+const denyBtn = document.querySelectorAll(".deny");
 const denyAlert = document.getElementById("deny-alert");
 
-denyBtn.addEventListener('click', function(){
-  denyAlert.classList.remove('d-none', 'fade');
-  this.disabled = true
+denyBtn.forEach(function(deny){
+  deny.addEventListener('click', function () {
+    denyAlert.classList.remove('d-none', 'fade');
+    this.disabled = true
+  });
 })
+
+
+const inviteBtn = document.getElementById("invite-to-job");
+const inviteAlert = document.getElementById("invite-alert");
+
+inviteBtn.addEventListener('click', function () {
+  inviteAlert.classList.remove('d-none', 'fade');
+})
+
+
+
 

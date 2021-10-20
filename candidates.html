@@ -25,6 +25,66 @@
 </head>
 
 <body class="bg-light">
+
+  <!-- candidate-status modal -->
+
+  <div class="modal right fade" id="candidate-status-modal" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Candidate status</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title">
+            <h2>Status</h2>
+          </div>
+          <div class="status-list">
+            <ul class="list-unstyled">
+              <li> <a href="#date-proposale-modal" data-toggle="modal" data-dismiss="modal">Applied</a> </li>
+              <li> <a href="#date-proposale-modal" data-toggle="modal" data-dismiss="modal">Pending interview</a> </li>
+              <li> <a href="#date-proposale-modal" data-toggle="modal" data-dismiss="modal">Scheduled interview</a>
+              </li>
+              <li> <a href="#date-proposale-modal" data-toggle="modal" data-dismiss="modal">Interviwed</a> </li>
+              <li> <a href="#date-proposale-modal" data-toggle="modal" data-dismiss="modal">Hired</a> </li>
+              <li> <a href="#date-proposale-modal" data-toggle="modal" data-dismiss="modal">Denied</a> </li>
+            </ul>
+          </div>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
+  <!-- date-proposale modal -->
+  <div class="modal right fade" id="date-proposale-modal" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <h4 class="modal-title fs16">Date proposal</h4>
+        </div>
+        <div class="modal-body flex-center-vh flex-column flex-nowrap h-100 text-center mb-4">
+          <div class="modal-title">
+            <h2 class="mb-4">Remember!</h2>
+            <p>Remember to create an event in Calendary with<br />the candidate's phone number to be notified.</p>
+          </div>
+          <div class="candidate-avatar mb-5 position-relative">
+            <div class="img-container flex-center-vh">
+              <img src="images/candidate.png" alt="candidate">
+            </div>
+            <span class="badge badge-primary">+34 65678873</span>
+          </div>
+          <div class="candidate-info">
+            <h3 class="mb-1">User name</h3>
+            <p class="mb-1">Bartender, Pub name</p>
+            <p>Location</p>
+          </div>
+          <button class="btn btn-danger btn-lg w-75">THANK YOU, I HAVE ALREADY DONE SO</button>
+        </div>
+      </div><!-- modal-content -->
+    </div><!-- modal-dialog -->
+  </div><!-- modal -->
+
   <!-- Modal STEP 1 -->
 
   <div class="modal right fade" id="job-1" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
@@ -371,7 +431,8 @@
 
         <!-- ALERT -->
 
-        <div id="deny-alert" class="alert alert-success flex-center-vh justify-content-between fsxs14 mb-4 fade d-none" role="alert">
+        <div id="deny-alert" class="alert alert-success flex-center-vh justify-content-between fsxs14 mb-4 fade d-none"
+          role="alert">
           <span> <strong>Success.</strong> The candidature from XXX has been denied.</span>
           <button type="button" class="align-items-center close btn d-flex h-100 py-0 ml-3" data-dismiss="alert"
             aria-label="Close" style="opacity: inherit;">
@@ -406,16 +467,17 @@
           <div class="section-header flex-center-vh justify-content-between">
             <ul class="nav nav-tabs mb-3" id="jobs-tab" role="tablist">
               <li class="nav-item">
-                <a class="nav-link active" id="home-tab" data-toggle="tab" href="#candidates-tab-container" role="tab"
+                <a class="nav-link" id="home-tab" data-toggle="tab" href="#candidates-tab-container" role="tab"
                   aria-controls="home" aria-selected="true">Candidates</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#Job-details-container" role="tab"
+                <a class="nav-link active" id="profile-tab" data-toggle="tab" href="#Job-details-container" role="tab"
                   aria-controls="profile" aria-selected="false">Job details</a>
               </li>
             </ul>
             <div class="flex-center-vh">
-              <a href="" class="text-primary fs14 mb-3 font-weight-bold"> <img class="mr-2" src="images/search-blue.png" alt="search"> FIND A CANDIDATE</a>
+              <a href="find-candidate.html" class="text-primary fs14 mb-3 font-weight-bold"> <img class="mr-2"
+                  src="images/search-blue.png" alt="search"> FIND A CANDIDATE</a>
             </div>
           </div>
 
@@ -423,7 +485,7 @@
 
           <div class="section-content">
             <div class="tab-content" id="jobs-tab">
-              <div class="tab-pane fade active show" id="candidates-tab-container" role="tabpanel" aria-labelledby="home-tab">
+              <div class="tab-pane fade" id="candidates-tab-container" role="tabpanel" aria-labelledby="home-tab">
                 <div class="interviews bg-light px-4 py-3 mb-4">
                   <div class="job-report flex-center-vh justify-content-start text-muted font-weight-bold fs14">
                     <span class="total-applied text-primary pl-lg-2 pl-3 mb-lg-0 mb-3">Applied<span
@@ -637,7 +699,8 @@
                             <div class="candidate-info-conatiner">
                               <div class="personal-info mb-5">
                                 <div class="candidate-status mb-4">
-                                  <span class="badge badge-success-light text-success px-4 py-2 mr-2">APPLIED</span>
+                                  <span class="badge badge-secondary-2 text-primary px-4 py-2 mr-2">PENDING
+                                    INTERVIEW</span>
                                   <span class="text-muted fs10">Applied 1 week ago</span>
                                 </div>
                                 <div class="section-title mb-3">
@@ -653,7 +716,7 @@
                                 </div>
                                 <div class="row m-0">
                                   <div class="col-sm-3 p-0">
-                                    <button id="deny" class="btn px-0 btn-light btn-large w-100 mb-sm-0 mb-3">DENY</button>
+                                    <button class="deny btn px-0 btn-light btn-lg mb-sm-0 mb-3">DENY</button>
                                   </div>
                                   <div class="col-sm-9 ml-sm-auto pr-0 pl-sm-4 pl-0">
                                     <div class="candidate-search candidate-status-search">
@@ -664,14 +727,22 @@
                                           APPLIED
                                         </a>
                                         <div class="dropdown-menu" aria-labelledby="nav-dropdown" style="width: 480px;">
-                                          <a class="dropdown-item" href="#">Applied</a>
-                                          <a class="dropdown-item" href="#">Pending interview</a>
-                                          <a class="dropdown-item" href="#">Scheduled interview</a>
-                                          <a class="dropdown-item" href="#">Interview</a>
-                                          <a class="dropdown-item" href="#">Hired</a>
-                                          <a class="dropdown-item" href="#">Hired</a>
-                                          <a class="dropdown-item" href="#">Hired</a>
-                                          <a class="dropdown-item" href="#">Hired</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Applied</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Pending interview</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Scheduled interview</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Interview</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Hired</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Hired</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Hired</a>
+                                          <a class="dropdown-item" href="#candidate-status-modal"
+                                            data-toggle="modal">Hired</a>
                                         </div>
                                       </div>
                                     </div>
@@ -679,7 +750,9 @@
                                 </div>
                               </div>
                               <div class="candidate-resume-tab">
-                                <ul class="nav nav-tabs mb-4 flex-center-vh justify-content-between flex-sm-row flex-column" id="resume-tab" role="tablist">
+                                <ul
+                                  class="nav nav-tabs mb-4 flex-center-vh justify-content-between flex-sm-row flex-column"
+                                  id="resume-tab" role="tablist">
                                   <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#exp" role="tab"
                                       aria-controls="home" aria-selected="true">EXPERIENCE</a>
@@ -694,7 +767,8 @@
                                   </li>
                                 </ul>
                                 <div class="tab-content" id="resume-tab">
-                                  <div class="tab-pane fade show active" id="exp" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade show active" id="exp" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <ul class="list-unstyled">
                                       <li>
                                         <p class="text-secondary fs14 mb-1" style="line-height: 24px;">
@@ -758,10 +832,12 @@
                                       </li>
                                     </ul>
                                   </div>
-                                  <div class="tab-pane fade text-center" id="edu" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade text-center" id="edu" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <h3>Education</h3>
                                   </div>
-                                  <div class="tab-pane fade text-center" id="other" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade text-center" id="other" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <h3>Other</h3>
                                   </div>
                                 </div>
@@ -770,7 +846,7 @@
                           </div>
                         </div>
                         <div class="tab-pane fade flex-center-vh align-items-start w-100" id="user-2" role="tabpanel"
-                        aria-labelledby="home-tab">
+                          aria-labelledby="home-tab">
 
                           <!-- CANDIDATE VIDEOS -->
                           <div class="col-lg-6 mb-lg-0 mb-4">
@@ -856,7 +932,7 @@
                                 </div>
                                 <div class="row m-0">
                                   <div class="col-sm-3 p-0">
-                                    <button class="btn px-0 btn-light btn-large w-100 mb-sm-0 mb-3">DENY</button>
+                                    <button class="deny btn px-0 btn-light btn-lg mb-sm-0 mb-3">DENY</button>
                                   </div>
                                   <div class="col-sm-9 ml-sm-auto pr-0 pl-sm-4 pl-0">
                                     <div class="candidate-search candidate-status-search">
@@ -884,7 +960,9 @@
 
                               <!-- candidate-resume-tab -->
                               <div class="candidate-resume-tab">
-                                <ul class="nav nav-tabs mb-4 flex-center-vh justify-content-between flex-sm-row flex-column" id="resume-tab2" role="tablist">
+                                <ul
+                                  class="nav nav-tabs mb-4 flex-center-vh justify-content-between flex-sm-row flex-column"
+                                  id="resume-tab2" role="tablist">
                                   <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#exp2" role="tab"
                                       aria-controls="home" aria-selected="true">EXPERIENCE</a>
@@ -899,7 +977,8 @@
                                   </li>
                                 </ul>
                                 <div class="tab-content" id="resume-tab2">
-                                  <div class="tab-pane fade show active" id="exp2" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade show active" id="exp2" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <ul class="list-unstyled">
                                       <li>
                                         <p class="text-secondary fs14 mb-1" style="line-height: 24px;">
@@ -963,19 +1042,21 @@
                                       </li>
                                     </ul>
                                   </div>
-                                  <div class="tab-pane fade text-center" id="edu2" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade text-center" id="edu2" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <h3>Education</h3>
                                   </div>
-                                  <div class="tab-pane fade text-center" id="other2" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade text-center" id="other2" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <h3>Other</h3>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                      </div>
-                      <div class="tab-pane fade flex-center-vh align-items-start w-100" id="user-3" role="tabpanel"
-                        aria-labelledby="home-tab">
+                        </div>
+                        <div class="tab-pane fade flex-center-vh align-items-start w-100" id="user-3" role="tabpanel"
+                          aria-labelledby="home-tab">
 
                           <!-- CANDIDATE VIDEOS -->
                           <div class="col-lg-6 mb-lg-0 mb-4">
@@ -1060,7 +1141,7 @@
                                 </div>
                                 <div class="row m-0">
                                   <div class="col-sm-3 p-0">
-                                    <button class="btn px-0 btn-light btn-large w-100 mb-sm-0 mb-3">DENY</button>
+                                    <button class="deny btn px-0 btn-light btn-lg mb-sm-0 mb-3">DENY</button>
                                   </div>
                                   <div class="col-sm-9 ml-sm-auto pr-0 pl-sm-4 pl-0">
                                     <div class="candidate-search candidate-status-search">
@@ -1087,7 +1168,9 @@
                               </div>
                               <!-- candidate-resume-tab -->
                               <div class="candidate-resume-tab">
-                                <ul class="nav nav-tabs mb-4 flex-center-vh justify-content-between flex-sm-row flex-column" id="resume-tab3" role="tablist">
+                                <ul
+                                  class="nav nav-tabs mb-4 flex-center-vh justify-content-between flex-sm-row flex-column"
+                                  id="resume-tab3" role="tablist">
                                   <li class="nav-item">
                                     <a class="nav-link active" id="home-tab" data-toggle="tab" href="#exp3" role="tab"
                                       aria-controls="home" aria-selected="true">EXPERIENCE</a>
@@ -1102,7 +1185,8 @@
                                   </li>
                                 </ul>
                                 <div class="tab-content" id="resume-tab3">
-                                  <div class="tab-pane fade show active" id="exp3" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade show active" id="exp3" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <ul class="list-unstyled">
                                       <li>
                                         <p class="text-secondary fs14 mb-1" style="line-height: 24px;">
@@ -1166,30 +1250,145 @@
                                       </li>
                                     </ul>
                                   </div>
-                                  <div class="tab-pane fade text-center" id="edu3" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade text-center" id="edu3" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <h3>Education</h3>
                                   </div>
-                                  <div class="tab-pane fade text-center" id="other3" role="tabpanel" aria-labelledby="home-tab">
+                                  <div class="tab-pane fade text-center" id="other3" role="tabpanel"
+                                    aria-labelledby="home-tab">
                                     <h3>Other</h3>
                                   </div>
                                 </div>
                               </div>
                             </div>
                           </div>
-                      </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="tab-pane fade" id="Job-details-container" role="tabpanel" aria-labelledby="profile-tab">
-                <h1>Job details - In progress</h1>
+              <div class="tab-pane fade active show mt-3" id="Job-details-container" role="tabpanel"
+                aria-labelledby="profile-tab">
+                <div class="tab-header p-4 bg-light flex-center-vh justify-content-between">
+                  <div class="company-info text-left">
+                    <h2 class="mb-2">Company Name</h2>
+                    <p class="font-weight-bold fs14 fsxs13">
+                      <span class="mr-3 d-md-inline d-block">Head Office Location: <span
+                          class="font-weight-normal">Remote</span></span>
+                      <span class="mr-3 d-md-inline d-block">Company Size: <span
+                          class="font-weight-normal">No</span></span>
+                      <span class="mr-3 d-md-inline d-block">Markets/Industries: <span
+                          class="font-weight-normal">Automotive</span></span>
+                    </p>
+                  </div>
+                  <div class="tab-nav-list flex-center-vh fs14">
+                    <a href="">DELETE</a>
+                    <a class="ml-sm-5 px-sm-4 px-2" href="">CLOSE</a>
+                    <button class="btn btn-danger btn-sm ml-sm-5">EDIT</button>
+                  </div>
+                </div>
+                <div class="company-video-container">
+                  <div class="container-fluid">
+                    <div class="row">
+                      <div class="col-lg-6 p-0">
+                        <div class="comapny-videos-tabs position-relative">
+                          <div class="tab-content" id="company-video-tab">
+                            <div class="tab-pane comapny-pane-video candidate-video-container fade active show mt-3"
+                              id="company-video-1" role="tabpanel" aria-labelledby="profile-tab">
+                              <video class="tab-video">
+                                <source src="video/teamvideo2.mp4" type="video/mp4" alt="teamvideo">
+                                Your browser does not support HTML video.
+                              </video>
+                            </div>
+                            <div class="tab-pane comapny-pane-video candidate-video-container fade mt-3"
+                              id="company-video-2" role="tabpanel" aria-labelledby="profile-tab">
+                              <video class="tab-video">
+                                <source src="video/teamvideo1.mp4" type="video/mp4" alt="teamvideo">
+                                Your browser does not support HTML video.
+                              </video>
+                            </div>
+                            <div class="tab-pane comapny-pane-video candidate-video-container fade mt-3"
+                              id="company-video-3" role="tabpanel" aria-labelledby="profile-tab">
+                              <video class="tab-video">
+                                <source src="video/teamvideo3.mp4" type="video/mp4" alt="teamvideo">
+                                Your browser does not support HTML video.
+                              </video>
+                            </div>
+                            <ul class="nav nav-tabs mb-3" id="company-video-tab" role="tablist">
+                              <li class="nav-item">
+                                <a class="nav-link candidate-video-tab active mr-1" id="home-tab" data-toggle="tab"
+                                  href="#company-video-1" role="tab" aria-controls="home" aria-selected="true"></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link candidate-video-tab mr-1" id="profile-tab" data-toggle="tab"
+                                  href="#company-video-2" role="tab" aria-controls="profile" aria-selected="false"></a>
+                              </li>
+                              <li class="nav-item">
+                                <a class="nav-link candidate-video-tab" id="profile-tab" data-toggle="tab"
+                                  href="#company-video-3" role="tab" aria-controls="profile" aria-selected="false"></a>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-lg-6 mt-3 text-left">
+                        <div class="social-links d-md-inline-block p-0">
+                          <ul class="list-unstyled flex-center-vh justify-content-between py-2 px-3 bg-light mb-0">
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/facebook.png" alt="Facebook_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/instagram.png" alt="Instagram_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/linkedin.png" alt="LinkedIN_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/twitter.png" alt="Twitter_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/youtube.png" alt="Youtube_black"></a></li>
+                            <li><a href="#"><img  src="images/social-icons/website.png" alt="website"></a></li>
+                          </ul>
+                        </div>
+                        <div class="company-logo-container flex-center-vh">
+                          <img class="w-100" src="images/logo-placeholder-image.png" alt="placeholder" style="max-width: 300px;">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-lg-6">
+                        <div class="company-description mt-3 text-left">
+                          <h2 class="fs24 mb-3">Companny description</h2>
+                          <p class="fs14 text-secondary" style="line-height: 24px;">
+                            Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                            your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                            lifestyle with the freedom to work however, wherever — on your terms.
+                            </p>
+                            <p class="fs14 text-secondary" style="line-height: 24px;">
+                            Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                            your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                            lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
+                            your lifestyle with the freedom to work however, wherever — on your terms.
+                          </p>
+                        </div>
+                      </div>
+                      <div class="col-lg-6">
+                        <div class="company-description mt-3 text-left">
+                          <h2 class="fs24 mb-3">Calture</h2>
+                          <p class="fs14 text-secondary" style="line-height: 24px;">
+                            Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                            your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                            lifestyle with the freedom to work however, wherever — on your terms.
+                            </p>
+                            <p class="fs14 text-secondary" style="line-height: 24px;">
+                            Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                            your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                            lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
+                            your lifestyle with the freedom to work however, wherever — on your terms.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
+        </section>
       </div>
-      </section>
-    </div>
     </div>
   </main>
 

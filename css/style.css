@@ -126,6 +126,7 @@ p { color: var(--secondary); font-weight: normal; }
 a { color: var(--primary); }
 a:hover { text-decoration: none; color: var(--dark) }
 a.text-primary:focus, a.text-primary:hover { text-decoration: none; color: var(--dark)!important; }
+
 /*ALERTS*/
 
 .alert {
@@ -872,7 +873,8 @@ transition: opacity 0.2s ease-in-out;
 }
 
 /*CANDIDATE VIDEO TAB*/
-.candidate-video .nav-tabs {
+
+.candidate-video .nav-tabs,.comapny-videos-tabs .nav-tabs {
   position: absolute;
   bottom: 30px;
   left: 50%;
@@ -956,15 +958,64 @@ transition: opacity 0.2s ease-in-out;
   color: var(--primary);
 }
 
+/*FIND CANDIDATE FILTER*/
 
+.break-line {
+  border-bottom: 4px solid var(--light);
+  margin: 0 -1rem;
+}
 
+/*STATUS LIST MODAL*/
 
+.status-list > ul > li a {
+  color: var(--secondary);
+  padding: 1.25rem 0;
+  box-shadow: inset 0px -2px 0px var(--light);
+  display: block;
+  font-weight: normal;
+}
 
+/*DATE PROPOSALE MODAL*/
+.candidate-avatar {
+  max-width: 175px;
+  max-height: 200px;
+}
+.img-container,.candidate-avatar .badge-primary  {
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.candidate-avatar .badge-primary {
+  padding: 18px 35px;
+  margin: 0;
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  transform: translate(-50%, 0);
+}
 
+ /* ============================================ *
+ * JOB DETAILS TAB
+ * ============================================ */
 
-
-
-
+ #Job-details-container .tab-header {
+   border-radius: 1.5rem;
+ }
+.tab-pane.comapny-pane-video,.tab-pane.comapny-pane-video .tab-video {
+  min-height: 323px;
+  max-height: 400px;
+}
+.comapny-videos-tabs .nav-tabs {
+  left: 0;
+  transform: translate(20px, 30px);
+  width: auto;
+}
+.comapny-videos-tabs .nav-tabs .nav-link {
+  min-width: 112px;
+}
+.social-links ul {border-radius: 1rem;}
+.social-links ul li a img {
+  width: 30px;
+}
 
 
  /* ============================================ *
@@ -1028,7 +1079,7 @@ transition: opacity 0.2s ease-in-out;
     display: table;
   }
   .modal.right .modal-dialog {width: 80%;}
-  .tab-pane.candidate-video-container,.tab-pane.candidate-video-container > video  {
+  .tab-pane.candidate-video-container:not(.tab-pane.comapny-pane-video),.tab-pane.candidate-video-container > video:not(.tab-pane.comapny-pane-video > video)  {
     min-height: 100vw;
   }
 }
@@ -1055,6 +1106,11 @@ transition: opacity 0.2s ease-in-out;
     text-align: center;
     display: block;
   }
+  #date-proposale-modal .btn {
+    padding-left: 0;
+    padding-right: 0;
+    font-size: .625rem;
+  }
  }
  
  @media(max-width:430px) {
@@ -1077,6 +1133,11 @@ transition: opacity 0.2s ease-in-out;
   }
   .job-report span .badge {padding: 5px;}
   .candidate-video .nav-tabs {bottom: 15px;}
+  .comapny-videos-tabs .nav-tabs .nav-link {min-width: 50px;}
+  .social-links ul li a img {
+    width: 25px;
+    margin-right: 0!important;
+  }
  }
  @media(max-width:350px) {
   .jobs-list-contsiner ul li {
