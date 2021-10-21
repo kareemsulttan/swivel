@@ -100,7 +100,7 @@ html, body {
 /*TEXT COLOR & BACKGROUND*/
 
 .text-primary {color:var(--primary)!important;}
-.bg-primary,.badge-primary {background-color:var(--primary)!important;}
+.bg-primary,.badge-primary,.alert-primary {background-color:var(--primary)!important;}
 .bg-primary-light,.badge-primary-light {background-color: rgba(183, 179, 212, 1);}
 .text-secondary {color:var(--secondary)!important;}
 .text-secondary-2 {color:var(--secondary-2)}
@@ -196,7 +196,8 @@ span.input-img.input-img-left {
   left: 0;
   right: initial;
 }
-span.upload-img {z-index: 1;}
+span.upload-img {z-index: 1;max-width: 56px;}
+span.upload-img > img {width: 100%;}
 span.alter-text-placeholder {
   position: var(--absolute);
   top: 0;
@@ -1016,6 +1017,37 @@ transition: opacity 0.2s ease-in-out;
 .social-links ul li a img {
   width: 30px;
 }
+
+.company-status .chart-details {
+  min-width: 100px;
+}
+.company-details-badges .badge {
+  border-radius: 1rem;
+}
+.description-container .company-description {
+  padding: 1.1rem 1.5rem;
+  background-color: var(--light);
+  border-radius: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  /* ============================================ *
