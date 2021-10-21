@@ -51,7 +51,9 @@ $('.privacy').on("click", function () {
   $('.terms-and-conditions').addClass('d-none');
   $('.privacy-policy').removeClass('d-none')
 })
-
+$('#change-pass').on('click', function () {
+  $('#pass-changed-alert').removeClass('d-none fade')
+})
 // active class link
 const navLink = document.querySelectorAll("#sidebar .nav-item .nav-link");
 for (let i = 0, length = navLink.length; i < length; i++) {
