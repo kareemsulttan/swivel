@@ -1297,43 +1297,116 @@
                 aria-labelledby="profile-tab">
                 <div class="tab-header p-4 bg-light flex-center-vh justify-content-between">
                   <div class="company-info text-left">
-                    <h2 class="mb-2">Company Name</h2>
-                    <p class="font-weight-bold fs14 fsxs13">
-                      <span class="mr-3 d-md-inline d-block">Head Office Location: <span
-                          class="font-weight-normal">Remote</span></span>
-                      <span class="mr-3 d-md-inline d-block">Company Size: <span
-                          class="font-weight-normal">No</span></span>
-                      <span class="mr-3 d-md-inline d-block">Markets/Industries: <span
-                          class="font-weight-normal">Automotive</span></span>
+                    <h2 class="mb-2">E-bike courier</h2>
+                    <p class="font-weight-normal fs14 fsxs13">
+                      <span class="mr-5">$50-70/hour </span>
+                      <span>Location</span>
                     </p>
                   </div>
                   <div class="tab-nav-list flex-center-vh fs14">
-                    <a href="#company-message" data-toggle="modal">DELETE</a>
-                    <a class="ml-sm-5 px-sm-4 px-2" href="">CLOSE</a>
+                    <a href="#">DELETE</a>
+                    <a class="ml-sm-5 px-sm-4 px-2" href="#company-message" data-toggle="modal">CLOSE</a>
                     <a href="job-info.html" class="btn btn-danger btn-sm ml-sm-5">EDIT</a>
                   </div>
                 </div>
                 <div class="company-video-container">
                   <div class="container-fluid">
                     <div class="row">
-                      <div class="col-lg-6 p-0">
+                      <div class="col-lg-6 p-0 mt-3">
+                        <div class="section-title text-left mb-4 mt-3">
+                          <h2 class="fs24">Job Stats</h2>
+                        </div>
+                        <div class="row company-status justify-content-between m-0">
+                          <div class="col-sm-6 mb-4">
+                            <div class="job-chart-details flex-center-vh justify-content-start">
+                              <div class="chart-details text-left">
+                                <div>
+                                  <h4 class="text-secondary fs16 font-weight-normal">Total jobs</h4>
+                                </div>
+                                <div>
+                                  <h2>42</h2>
+                                </div>
+                                <div>
+                                  <h5 class="font-weight-bold text-success fs16">+20%</h5>
+                                </div>
+                              </div>
+                              <div class="job-chart">
+                                <canvas class="chart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 mb-4">
+                            <div class="job-chart-details flex-center-vh justify-content-start">
+                              <div class="chart-details text-left">
+                                <div>
+                                  <h4 class="text-secondary fs16 font-weight-normal">Total applied</h4>
+                                </div>
+                                <div>
+                                  <h2>567</h2>
+                                </div>
+                                <div>
+                                  <h5 class="font-weight-bold text-success fs16">+200%</h5>
+                                </div>
+                              </div>
+                              <div class="job-chart">
+                                <canvas class="chart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6 mb-4">
+                            <div class="job-chart-details flex-center-vh justify-content-start">
+                              <div class="chart-details text-left">
+                                <div>
+                                  <h4 class="text-secondary fs16 font-weight-normal">interviwed</h4>
+                                </div>
+                                <div>
+                                  <h2>10</h2>
+                                </div>
+                                <div>
+                                  <h5 class="font-weight-bold text-danger fs16">-5%</h5>
+                                </div>
+                              </div>
+                              <div class="job-chart">
+                                <canvas class="chart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-6">
+                            <div class="job-chart-details flex-center-vh justify-content-start">
+                              <div class="chart-details text-left">
+                                <div>
+                                  <h4 class="text-secondary fs16 font-weight-normal">Hired</h4>
+                                </div>
+                                <div>
+                                  <h2>2</h2>
+                                </div>
+                                <div>
+                                  <h5 class="font-weight-bold text-success fs16">+100%</h5>
+                                </div>
+                              </div>
+                              <div class="job-chart">
+                                <canvas class="chart"></canvas>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                         <div class="comapny-videos-tabs position-relative">
                           <div class="tab-content" id="company-video-tab">
-                            <div class="tab-pane comapny-pane-video candidate-video-container fade active show mt-3"
+                            <div class="tab-pane comapny-pane-video candidate-video-container fade active show"
                               id="company-video-1" role="tabpanel" aria-labelledby="profile-tab">
                               <video class="tab-video">
                                 <source src="video/teamvideo2.mp4" type="video/mp4" alt="teamvideo">
                                 Your browser does not support HTML video.
                               </video>
                             </div>
-                            <div class="tab-pane comapny-pane-video candidate-video-container fade mt-3"
+                            <div class="tab-pane comapny-pane-video candidate-video-container fade"
                               id="company-video-2" role="tabpanel" aria-labelledby="profile-tab">
                               <video class="tab-video">
                                 <source src="video/teamvideo1.mp4" type="video/mp4" alt="teamvideo">
                                 Your browser does not support HTML video.
                               </video>
                             </div>
-                            <div class="tab-pane comapny-pane-video candidate-video-container fade mt-3"
+                            <div class="tab-pane comapny-pane-video candidate-video-container fade"
                               id="company-video-3" role="tabpanel" aria-labelledby="profile-tab">
                               <video class="tab-video">
                                 <source src="video/teamvideo3.mp4" type="video/mp4" alt="teamvideo">
@@ -1357,32 +1430,9 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6 pl-lg-3 pl-0 mt-3 text-left">
-                        <div class="social-links d-md-inline-block p-0">
-                          <ul class="list-unstyled flex-center-vh justify-content-between py-2 px-3 bg-light mb-0">
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/facebook.png"
-                                  alt="Facebook_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/instagram.png"
-                                  alt="Instagram_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/linkedin.png"
-                                  alt="LinkedIN_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/twitter.png"
-                                  alt="Twitter_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/youtube.png"
-                                  alt="Youtube_black"></a></li>
-                            <li><a href="#"><img src="images/social-icons/website.png" alt="website"></a></li>
-                          </ul>
-                        </div>
-                        <div class="company-logo-container flex-center-vh">
-                          <img class="w-100" src="images/logo-placeholder-image.png" alt="placeholder"
-                            style="max-width: 300px;">
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-lg-6 pl-lg-0">
+                      <div class="col-lg-6 mt-3 text-left">
                         <div class="company-description mt-3 text-left">
-                          <h2 class="fs24 mb-3">Companny description</h2>
+                          <h2 class="fs24 mb-3">Job description</h2>
                           <p class="fs14 text-secondary" style="line-height: 24px;">
                             Design your lifestyle with the freedom to work however, wherever — on your terms. Design
                             your lifestyle with the freedom to work however, wherever — on your terms. Design your
@@ -1395,153 +1445,38 @@
                             your lifestyle with the freedom to work however, wherever — on your terms.
                           </p>
                         </div>
-                      </div>
-                      <div class="col-lg-6">
-                        <div class="company-description mt-3 text-left">
-                          <h2 class="fs24 mb-3">Calture</h2>
-                          <p class="fs14 text-secondary" style="line-height: 24px;">
-                            Design your lifestyle with the freedom to work however, wherever — on your terms. Design
-                            your lifestyle with the freedom to work however, wherever — on your terms. Design your
-                            lifestyle with the freedom to work however, wherever — on your terms.
-                          </p>
-                          <p class="fs14 text-secondary" style="line-height: 24px;">
-                            Design your lifestyle with the freedom to work however, wherever — on your terms. Design
-                            your lifestyle with the freedom to work however, wherever — on your terms. Design your
-                            lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
-                            your lifestyle with the freedom to work however, wherever — on your terms.
-                          </p>
+                        <div class="section-title text-left mb-4">
+                          <h2 class="fs24">Details</h2>
+                        </div>
+                        <div class="row m-0 company-details-badges justify-content-start">
+                          <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                            <h3 class="text-muted fs14 font-weight-normal mb-3">Job type</h3>
+                            <h2 class="fs18">Full time</h2>
+                          </div>
+                          <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                            <h3 class="text-muted fs14 font-weight-normal mb-3">Shift patterns</h3>
+                            <h2 class="fs18">Weekday</h2>
+                          </div>
+                          <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                            <h3 class="text-muted fs14 font-weight-normal mb-3">Job start date</h3>
+                            <h2 class="fs18">23/07/21</h2>
+                          </div>
+                        </div>
+                        <div class="row m-0 company-details-badges justify-content-start">
+                          <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                            <h3 class="text-muted fs14 font-weight-normal mb-3">Job type</h3>
+                            <h2 class="fs18">Full time</h2>
+                          </div>
+                          <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                            <h3 class="text-muted fs14 font-weight-normal mb-3">Shift patterns</h3>
+                            <h2 class="fs18">Weekday</h2>
+                          </div>
+                          <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                            <h3 class="text-muted fs14 font-weight-normal mb-3">Job start date</h3>
+                            <h2 class="fs18">23/07/21</h2>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- STATUS -->
-        <!-- THIS SECTION HAS BEEN HIDED -->
-        <section class="app-content resume bg-white d-none">
-          <div class="section-content">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-6 pl-lg-0">
-                  <div class="section-title text-left mb-4">
-                    <h2 class="fs24">Company Stats</h2>
-                  </div>
-                  <div class="row company-status justify-content-between m-0">
-                    <div class="col-sm-6 mb-4">
-                      <div class="job-chart-details flex-center-vh justify-content-start">
-                        <div class="chart-details text-left">
-                          <div>
-                            <h4 class="text-secondary fs16 font-weight-normal">Total jobs</h4>
-                          </div>
-                          <div>
-                            <h2>42</h2>
-                          </div>
-                          <div>
-                            <h5 class="font-weight-bold text-success fs16">+20%</h5>
-                          </div>
-                        </div>
-                        <div class="job-chart">
-                          <iframe class="chartjs-hidden-iframe"
-                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
-                          <canvas class="chart" width="272" height="50" style="width: 272px; height: 50px;"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <div class="job-chart-details flex-center-vh justify-content-start">
-                        <div class="chart-details text-left">
-                          <div>
-                            <h4 class="text-secondary fs16 font-weight-normal">Total applied</h4>
-                          </div>
-                          <div>
-                            <h2>567</h2>
-                          </div>
-                          <div>
-                            <h5 class="font-weight-bold text-success fs16">+200%</h5>
-                          </div>
-                        </div>
-                        <div class="job-chart">
-                          <iframe class="chartjs-hidden-iframe"
-                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
-                          <canvas class="chart" width="271" height="50" style="width: 271px; height: 50px;"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6 mb-4">
-                      <div class="job-chart-details flex-center-vh justify-content-start">
-                        <div class="chart-details text-left">
-                          <div>
-                            <h4 class="text-secondary fs16 font-weight-normal">interviwed</h4>
-                          </div>
-                          <div>
-                            <h2>10</h2>
-                          </div>
-                          <div>
-                            <h5 class="font-weight-bold text-danger fs16">-5%</h5>
-                          </div>
-                        </div>
-                        <div class="job-chart">
-                          <iframe class="chartjs-hidden-iframe"
-                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
-                          <canvas class="chart" width="272" height="50" style="width: 272px; height: 50px;"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-6">
-                      <div class="job-chart-details flex-center-vh justify-content-start">
-                        <div class="chart-details text-left">
-                          <div>
-                            <h4 class="text-secondary fs16 font-weight-normal">Hired</h4>
-                          </div>
-                          <div>
-                            <h2>2</h2>
-                          </div>
-                          <div>
-                            <h5 class="font-weight-bold text-success fs16">+100%</h5>
-                          </div>
-                        </div>
-                        <div class="job-chart">
-                          <iframe class="chartjs-hidden-iframe"
-                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
-                          <canvas class="chart" width="272" height="50" style="width: 272px; height: 50px;"></canvas>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="section-title text-left mb-4">
-                    <h2 class="fs24">Company Details</h2>
-                  </div>
-                  <div class="row m-0 company-details-badges justify-content-start">
-                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
-                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job type</h3>
-                      <h2 class="fs18">Full time</h2>
-                    </div>
-                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
-                      <h3 class="text-muted fs14 font-weight-normal mb-3">Shift patterns</h3>
-                      <h2 class="fs18">Weekday</h2>
-                    </div>
-                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
-                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job start date</h3>
-                      <h2 class="fs18">23/07/21</h2>
-                    </div>
-                  </div>
-                  <div class="row m-0 company-details-badges justify-content-start">
-                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
-                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job type</h3>
-                      <h2 class="fs18">Full time</h2>
-                    </div>
-                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
-                      <h3 class="text-muted fs14 font-weight-normal mb-3">Shift patterns</h3>
-                      <h2 class="fs18">Weekday</h2>
-                    </div>
-                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
-                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job start date</h3>
-                      <h2 class="fs18">23/07/21</h2>
                     </div>
                   </div>
                 </div>

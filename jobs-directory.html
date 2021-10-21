@@ -15,7 +15,8 @@
   <!-- ROBOTO FONT -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
     rel="stylesheet">
   <!-- BOOTSTRAP -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
@@ -293,7 +294,8 @@
           </div>
         </div>
         <div class="fs14 text-center text-primary"><a href="#">SKIP & SAVE</a></div>
-        <div class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
           <div class="pl-xl-5 mb-sm-0 mb-3">
             <a href="#job-2" data-dismiss="modal" data-toggle="modal">BACK</a>
           </div>
@@ -767,6 +769,84 @@
   <script src="js/chart.min.js"></script>
   <!-- APP JS -->
   <script src="js/app.js"></script>
+  <script>
+    var charts = document.getElementsByClassName('chart')
+    for (chart of charts) {
+      var ctx = chart.getContext('2d');
+      gradient = ctx.createLinearGradient(0, 0, 0, 50);
+      gradient.addColorStop(0, 'rgba(240, 113, 103, 0.5)');
+      gradient.addColorStop(0.5, 'rgba(240, 113, 103, 0.25)');
+      gradient.addColorStop(1, 'rgba(240, 113, 103, 0)');
+      var data = {
+        labels: ['January', 'February', 'March', 'April', 'May', 'June'],
+        datasets: [{
+          label: 'Custom Label Name',
+          backgroundColor: gradient,
+          pointBackgroundColor: 'white',
+          borderWidth: 6,
+          borderColor: '#F07167',
+          data: [50, 55, 65, 56, 54, 50]
+        }]
+      };
+      var options = {
+        responsive: true,
+        maintainAspectRatio: false,
+        animation: {
+          easing: 'easeInOutQuad',
+          duration: 520
+        },
+        scales: {
+          xAxes: [{
+            gridLines: {
+              color: 'rgba(200, 200, 200, 0)',
+              lineWidth: 5,
+              display: false,
+            },
+            ticks: {
+              display: false
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              color: 'rgba(200, 200, 200, 0)',
+              lineWidth: 5,
+              display: false
+            },
+            ticks: {
+              display: false
+            }
+          }]
+        },
+        elements: {
+          line: {
+            tension: 0.4
+          },
+          point: {
+            radius: 0
+          }
+        },
+        legend: {
+          display: false
+        },
+        point: {
+          radius: 0
+        },
+        tooltips: {
+          backgroundColor: 'rgba(0,0,0,0.3)',
+          titleFontColor: 'red',
+          caretSize: 5,
+          cornerRadius: 2,
+          xPadding: 10,
+          yPadding: 10
+        }
+      };
+      var chartInstance = new Chart(ctx, {
+        type: 'line',
+        data: data,
+        options: options
+      });
+    }
+  </script>
 </body>
 
 </html>

@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-  <title>Edit job</title>
+  <title>Company Profile</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
@@ -25,7 +25,6 @@
 </head>
 
 <body class="bg-light">
-
   <!-- modal -->
   <!-- Modal STEP 1 -->
   <div class="modal right fade" id="job-1" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
@@ -189,18 +188,17 @@
         <div class="modal-header justify-content-center">
           <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
-          <h4 class="modal-title fs16">Important</h4>
+          <h4 class="modal-title fs16">Delete company</h4>
         </div>
         <div class="modal-body text-center flex-center-vh">
           <div class="container-fluid">
             <div class="row center-vh">
               <div class="col-lg-12 p-0">
                 <div class="user-details">
-                  <img class="mb-5" src="images/exit.png" alt="exit">
+                  <img class="mb-5" src="images/delete-job.png" alt="exit">
                   <h3 class="fs24 mb-3">Are you sure?</h3>
                   <p class="mb-4">This action cannot be undone, if you exitall the information will be deleted.</p>
-                  <a href="#job-4" class="btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal">CONTINUE
-                    CREATING THE JOB</a>
+                  <a href="#" class="btn btn-primary btn-lg" data-dismiss="modal">CANCEL</a>
                 </div>
               </div>
             </div>
@@ -281,7 +279,7 @@
         <div class="nav-components">
           <ul class="list-unstyled d-md-block d-flex justify-content-around mb-0">
             <li class="nav-item mb-md-3 mb-0">
-              <a href="#" class="nav-link active">
+              <a href="#" class="nav-link">
                 <span class="nav-icons">
                   <img class="active-icon" src="images/dashboard/jobs-active.png" alt="jobs">
                   <img class="current-icon" src="images/dashboard/jobs-default.png" alt="jobs">
@@ -290,7 +288,7 @@
               </a>
             </li>
             <li class="nav-item mb-md-3 mb-0">
-              <a href="#" class="nav-link">
+              <a href="#" class="nav-link active">
                 <span class="nav-icons">
                   <img class="active-icon" src="images/dashboard/company-active.png" alt="company">
                   <img class="current-icon" src="images/dashboard/company-default.png" alt="company">
@@ -327,166 +325,148 @@
             <img src="images/close-white.png" alt="close">
           </button>
         </div>
+        <!-- ALERT CLOSED JOB -->
+        <div id="delete-alert"
+          class="text-white alert alert-primary flex-center-vh justify-content-between fsxs14 mb-4 fade d-none"
+          role="alert">
+          <span> <img src="images/info.png" alt="info" style="margin-top: -3px;"> <strong>Success.</strong> This Job was
+            closed on 12/05/2020.</span>
+          <button type="button" class="align-items-center close btn d-flex h-100 py-0 ml-3" data-dismiss="alert"
+            aria-label="Close" style="opacity: inherit;">
+            <img src="images/close-white.png" alt="close">
+          </button>
+        </div>
         <!-- HEADER -->
         <header class="app-header mb-4">
           <!-- APP BODY NAV -->
           <nav class="app-body-nav d-flex justify-content-between">
             <button class="btn btn-transparent p-0 fsxs12">
-              <a href="candidates.html" class="text-muted flex-center-vh">
-                <img src="images/back.png" class="mr-sm-4 mr-2" alt="back">
-                <span>Edit job details</span>
+              <a href="#" class="text-muted flex-center-vh">
+                <span>Company</span>
               </a>
             </button>
-            <button href="#" class="btn btn-secondary btn-md flex-center-vh fsxs12" data-toggle="modal" disabled>
+            <a href="#" class="btn btn-secondary btn-md flex-center-vh fsxs12" data-toggle="modal">
               <img src="images/plus.png" alt="plus" style="margin-right: 12px;">
-              <span style="line-height: 16px;">ADD JOB</span>
-            </button>
+              <span style="line-height: 16px;">NEW JOB</span>
+            </a>
           </nav>
         </header>
         <section class="app-content open-jobs bg-white">
-          <!-- SECTION HEADER -->
-          <div class="section-header flex-center-vh justify-content-between mb-3">
-            <div class="section-title">
-              <h2>Details</h2>
-            </div>
-            <a href="#" class="btn btn-danger btn-sm ml-sm-3">SAVE</a>
-          </div>
           <!-- SECTION CONTENT -->
           <div class="section-content">
-            <div class="container-fluid">
-              <div class="row">
-                <div class="col-lg-6 pl-lg-0 text-left">
-                  <div class="about-job">
-                    <div class="about-the-job">
-                      <div class="section-title mb-3">
-                        <h3 class="fs16">About job</h3>
-                      </div>
-                      <form action="" class="mb-4">
-                        <div class="form-group position-relative">
-                          <input type="text" class="form-control custom-select-control text-dark" id="inputName"
-                            placeholder="Barista" required="">
-                          <span class="alter-text-placeholder fixed-text">Title / Role</span>
+            <div class="tab-header flex-center-vh justify-content-between">
+              <div class="company-info text-left">
+                <h2 class="mb-2">Company Name</h2>
+                <p class="font-weight-bold fs14 fsxs13">
+                  <span class="mr-3 d-md-inline d-block">Head Office Location: <span
+                      class="font-weight-normal">Remote</span></span>
+                  <span class="mr-3 d-md-inline d-block">Company Size: <span class="font-weight-normal">No</span></span>
+                  <span class="mr-3 d-md-inline d-block">Markets/Industries: <span
+                      class="font-weight-normal">Automotive</span></span>
+                </p>
+              </div>
+              <div class="tab-nav-list flex-center-vh fs14">
+                <a href="#job-message" data-toggle="modal">DELETE</a>
+                <a href="#job-1" class="btn btn-danger btn-sm ml-sm-5" data-toggle="modal">EDIT</a>
+              </div>
+            </div>
+            <div class="company-video-container">
+              <div class="container-fluid">
+                <div class="row">
+                  <div class="col-lg-6 p-0">
+                    <div class="comapny-videos-tabs position-relative">
+                      <div class="tab-content" id="company-video-tab">
+                        <div class="tab-pane comapny-pane-video candidate-video-container fade active show mt-3"
+                          id="company-video-1" role="tabpanel" aria-labelledby="profile-tab">
+                          <video class="tab-video">
+                            <source src="video/teamvideo2.mp4" type="video/mp4" alt="teamvideo">
+                            Your browser does not support HTML video.
+                          </video>
                         </div>
-                        <div class="row m-0">
-                          <div class="col-lg-6 pl-lg-0 pr-lg-1 p-0">
-                            <div class="form-group position-relative">
-                              <input type="text" class="form-control custom-select-control text-dark" id="inputName"
-                                placeholder="Paris" required="">
-                              <span class="alter-text-placeholder fixed-text">Location</span>
-                            </div>
-                          </div>
-                          <div class="col-lg-6 pr-lg-0 pl-lg-1 p-0">
-                            <div class="form-group position-relative">
-                              <select class="form-control custom-select-control text-dark" id="type" required="">
-                                <option selected="">Full time</option>
-                                <option value="">Part time</option>
-                                <option value="">Days</option>
-                              </select>
-                              <span class="alter-text-placeholder fixed-text">Job Type</span>
-                            </div>
-                          </div>
+                        <div class="tab-pane comapny-pane-video candidate-video-container fade mt-3"
+                          id="company-video-2" role="tabpanel" aria-labelledby="profile-tab">
+                          <video class="tab-video">
+                            <source src="video/teamvideo1.mp4" type="video/mp4" alt="teamvideo">
+                            Your browser does not support HTML video.
+                          </video>
                         </div>
-                      </form>
-                    </div>
-                    <div class="job-type mb-3">
-                      <div class="section-title mb-3">
-                        <h3 class="fs16">Type</h3>
-                      </div>
-                      <ul class="list-unstyled d-flex mb-0">
-                        <li class="active  mb-3">
-                          <a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Full time</a>
-                        </li>
-                        <li class="mb-3">
-                          <a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Part time</a>
-                        </li>
-                        <li class="mb-3">
-                          <a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Days</a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="salary">
-                      <div class="section-title mb-3">
-                        <h3 class="fs16">Salary</h3>
-                      </div>
-                      <form action="">
-                        <div class="form-group position-relative">
-                          <select class="form-control custom-select-control text-dark" id="currency" required="">
-                            <option selected="">EUR €</option>
-                            <option value="20">USD $</option>
-                            <option value="30">GBP £</option>
-                          </select>
-                          <span class="alter-text-placeholder fixed-text">Currency *</span>
+                        <div class="tab-pane comapny-pane-video candidate-video-container fade mt-3"
+                          id="company-video-3" role="tabpanel" aria-labelledby="profile-tab">
+                          <video class="tab-video">
+                            <source src="video/teamvideo3.mp4" type="video/mp4" alt="teamvideo">
+                            Your browser does not support HTML video.
+                          </video>
                         </div>
-                        <div class="d-flex flex-md-nowrap flex-wrap justify-content-between">
-                          <div class="form-group position-relative w-100 mr-md-2 mr-0">
-                            <input type="text" class="form-control custom-select-control text-dark" id="from"
-                              placeholder="0 €" required="">
-                            <span class="alter-text-placeholder fixed-text">From</span>
-                          </div>
-                          <div class="form-group position-relative w-100 mr-md-2 mr-0">
-                            <input type="text" class="form-control custom-select-control text-dark" id="to"
-                              placeholder="0 €" required="">
-                            <span class="alter-text-placeholder fixed-text">To</span>
-                          </div>
-                          <div class="form-group position-relative w-100">
-                            <select class="form-control custom-select-control text-dark" id="currency" required="">
-                              <option selected="">Per hour</option>
-                              <option value="example1">example</option>
-                              <option value="example2">example</option>
-                            </select>
-                            <span class="alter-text-placeholder fixed-text">Frequency</span>
-                          </div>
-                        </div>
-                        <div class="form-group position-relative">
-                          <input type="text" class="form-control text-dark" id="from" placeholder="Tips, comision..."
-                            required="">
-                        </div>
-                      </form>
-                    </div>
-                    <div class="description-container">
-                      <div class="section-title mb-3">
-                        <h3 class="fs16 mb-3">Company description</h3>
-                      </div>
-                      <div class="company-description mt-3 text-left">
-                        <h4 class="fs12 mb-1 text-secondary">Job description</h4>
-                        <p class="fs14 text-dark" style="line-height: 24px;">
-                          Design your lifestyle with the freedom to work however, wherever — on your terms. Design
-                          your lifestyle with the freedom to work however, wherever — on your terms. Design your
-                          lifestyle with the freedom to work however, wherever — on your terms.
-                        </p>
-                        <p class="fs14 text-dark mb-0" style="line-height: 24px;">
-                          Design your lifestyle with the freedom to work however, wherever — on your terms. Design
-                          your lifestyle with the freedom to work however, wherever — on your terms. Design your
-                          lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
-                          your lifestyle with the freedom to work however, wherever — on your terms.
-                        </p>
+                        <ul class="nav nav-tabs mb-3" id="company-video-tab" role="tablist">
+                          <li class="nav-item">
+                            <a class="nav-link candidate-video-tab active mr-1" id="home-tab" data-toggle="tab"
+                              href="#company-video-1" role="tab" aria-controls="home" aria-selected="true"></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link candidate-video-tab mr-1" id="profile-tab" data-toggle="tab"
+                              href="#company-video-2" role="tab" aria-controls="profile" aria-selected="false"></a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link candidate-video-tab" id="profile-tab" data-toggle="tab"
+                              href="#company-video-3" role="tab" aria-controls="profile" aria-selected="false"></a>
+                          </li>
+                        </ul>
                       </div>
                     </div>
                   </div>
-                </div>
-                <div class="col-lg-6 text-left">
-                  <div class="upload-video">
-                    <div class="section-title mb-4">
-                      <h3 class="fs16 mb-3">Upload videos</h3>
-                      <p class="fs14">Upload several videos where you explain in a clear and simple way the offer so
-                        that candidates are interested in your job offer.</p>
+                  <div class="col-lg-6 pl-lg-3 pl-0 mt-3 text-left">
+                    <div class="social-links d-md-inline-block p-0">
+                      <ul class="list-unstyled flex-center-vh justify-content-between py-2 px-3 bg-light mb-0">
+                        <li><a href="#"><img class="mr-3" src="images/social-icons/facebook.png"
+                              alt="Facebook_black"></a></li>
+                        <li><a href="#"><img class="mr-3" src="images/social-icons/instagram.png"
+                              alt="Instagram_black"></a></li>
+                        <li><a href="#"><img class="mr-3" src="images/social-icons/linkedin.png"
+                              alt="LinkedIN_black"></a></li>
+                        <li><a href="#"><img class="mr-3" src="images/social-icons/twitter.png" alt="Twitter_black"></a>
+                        </li>
+                        <li><a href="#"><img class="mr-3" src="images/social-icons/youtube.png" alt="Youtube_black"></a>
+                        </li>
+                        <li><a href="#"><img src="images/social-icons/website.png" alt="website"></a></li>
+                      </ul>
                     </div>
-                    <div class="upload-vedios-container">
-                      <form>
-                        <label class="form__container flex-center-vh" id="upload-container">
-                          <span class="font-weight-normal">
-                            <span class="d-block w-100 text-center mb-4">
-                              <img src="images/drag-drop-upload.png" alt="drag-drop-upload">
-                            </span>
-                            Drop your video here, or <span class="text-danger ml-1"> browse</span>
-                          </span>
-                          <input class="form__file" id="upload-files" type="file" accept="video/*"
-                            multiple="multiple" />
-                        </label>
-                        <h4 class="text-muted fs14 mt-2 pt-2 mb-3">Uploaded videos</h4>
-                        <ul class="form__files-container" id="files-list-container">
-                        </ul>
-                      </form>
+                    <div class="company-logo-container flex-center-vh">
+                      <img class="w-100" src="images/logo-placeholder-image.png" alt="placeholder"
+                        style="max-width: 300px;">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-6 pl-lg-0">
+                    <div class="company-description mt-3 text-left">
+                      <h2 class="fs24 mb-3">Companny description</h2>
+                      <p class="fs14 text-secondary" style="line-height: 24px;">
+                        Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                        your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                        lifestyle with the freedom to work however, wherever — on your terms.
+                      </p>
+                      <p class="fs14 text-secondary" style="line-height: 24px;">
+                        Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                        your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                        lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
+                        your lifestyle with the freedom to work however, wherever — on your terms.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-lg-6">
+                    <div class="company-description mt-3 text-left">
+                      <h2 class="fs24 mb-3">Calture</h2>
+                      <p class="fs14 text-secondary" style="line-height: 24px;">
+                        Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                        your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                        lifestyle with the freedom to work however, wherever — on your terms.
+                      </p>
+                      <p class="fs14 text-secondary" style="line-height: 24px;">
+                        Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                        your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                        lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
+                        your lifestyle with the freedom to work however, wherever — on your terms.
+                      </p>
                     </div>
                   </div>
                 </div>
