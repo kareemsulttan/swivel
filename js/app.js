@@ -83,6 +83,14 @@ $(".job-type ul li").on('click', function () {
   $(this).addClass('active')
 })
 
+const deleteJobBtn = document.getElementById("delete-this-job");
+const deleteAlert = document.getElementById("delete-alert");
+
+deleteJobBtn.addEventListener('click', function () {
+  deleteAlert.classList.remove('d-none', 'fade'); 
+  console.log("works")
+}) 
+
 /*UPLOAD VIDEO*/
 
 const INPUT_FILE = document.querySelector('#upload-files');
@@ -330,7 +338,6 @@ const inviteAlert = document.getElementById("invite-alert");
 inviteBtn.addEventListener('click', function () {
   inviteAlert.classList.remove('d-none', 'fade');
 })
-
 
 
 
