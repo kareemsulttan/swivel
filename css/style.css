@@ -1030,9 +1030,14 @@ transition: opacity 0.2s ease-in-out;
   border-radius: 1rem;
 }
 
+ /* ============================================ *
+ * ACCOUNT PHASE
+ * ============================================ */
 
-
-
+.account-phase, .account-phase #wrapper, .account-phase #app-body , .account-phase .account-section, .account-phase .section-content,
+.account-phase .container-fluid,.account-phase .row {height: 100%;}
+#account-tab > .nav-link {font-weight: normal; color: var(--dark);}
+#account-tab > .nav-link.active {font-weight: bold; color: var(--primary);}
 
 
 
@@ -1099,6 +1104,12 @@ transition: opacity 0.2s ease-in-out;
  @media screen and (max-width: 1400px) and (min-width: 1200px) {
   .candidate-resume-tab .nav-tabs .nav-item .nav-link {
     padding: .6rem 1rem;
+  }
+ }
+
+ @media(max-width:991px) {
+  .account-phase .app-content .section-nav {
+    position: initial;
   }
  }
 
