@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Edit job</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="keywords" content="Saas, Software, multi-uses, HTML, Clean, Modern" />
+  <meta name="author" content="Swivel" />
+  <meta name="email" content="" />
+  <meta name="website" content="" />
+  <meta name="Version" content="" />
+  <!-- FAVICON -->
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <!-- ROBOTO FONT -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet">
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- STYLE -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-light">
+
+  <!-- modal -->
+  <!-- Modal STEP 1 -->
+  <div class="modal right fade" id="job-1" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span
+              aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Edit Company</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title">
+            <h2>Details</h2>
+          </div>
+          <form class="mb-3" action="">
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="inputName"
+                placeholder="Company Name" required="">
+              <span class="alter-text-placeholder fixed-text">Name *</span>
+            </div>
+            <div class="form-group form-control file-upload position-relative p-0">
+              <input type="file" class="custom-file-input" id="file">
+              <span class="alter-text-placeholder upload-file-text">Company logo</span>
+              <span class="input-img upload-img"><img src="images/logo-placeholder-image.png" alt="upload"></span>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="inputName"
+                placeholder="Location" required="">
+              <span class="alter-text-placeholder fixed-text">Head Office Location</span>
+            </div>
+            <div class="row m-0">
+              <div class="col-lg-6 pl-lg-0 pr-lg-1 p-0">
+                <div class="form-group position-relative">
+                  <select class="form-control custom-select-control text-dark" id="size" required="">
+                    <option selected="">1 - 10</option>
+                    <option value="">11 - 50</option>
+                    <option value="">51 - 100</option>
+                    <option value="">101 - 250</option>
+                    <option value="">251 - 500</option>
+                    <option value="">501 - 1000</option>
+                    <option value="">1001 - 5000</option>
+                    <option value="">5001 - 10000</option>
+                    <option value="">10000+</option>
+                  </select>
+                  <span class="alter-text-placeholder fixed-text">Size *</span>
+                </div>
+              </div>
+              <div class="col-lg-6 pr-lg-0 pl-lg-1 p-0">
+                <div class="form-group">
+                  <select class="form-control" id="markets" required="">
+                    <option selected="">Markets/Industries *</option>
+                    <option value="1">Food Delivery</option>
+                    <option value="2">Retail</option>
+                    <option value="3">Supermarkets</option>
+                    <option value="4">Restaurant</option>
+                    <option value="5">Bar/Pub</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="input-group">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Company Description" rows="7"
+                cols="50"></textarea>
+            </div>
+          </form>
+        </div>
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">1</span> of <span
+                class="total-steps">3</span></span>
+          </div>
+          <div>
+            <a class="btn btn-primary btn-lg" data-dismiss="modal" href="#job-2" data-toggle="modal">NEXT</a>
+          </div>
+        </div>
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
+  <!-- Modal STEP 2 -->
+  <div class="modal right fade" id="job-2" tabindex="-1" role="dialog" aria-labelledby="job-3Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span data-toggle="modal"
+              data-target="" aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Edit Company</h4>
+        </div>
+        <div class="modal-body">
+          <div class="modal-title">
+            <h2>Culture</h2>
+          </div>
+          <form action="">
+            <div class="input-group mb-4">
+              <textarea class="form-control" aria-label="With textarea" placeholder="Culture" rows="7"
+                cols="50"></textarea>
+            </div>
+            <div class="modal-title">
+              <h2>Company Pages</h2>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="twitter" placeholder="Twitter.com/">
+              <span class="input-img"><img src="images/social-twitter.png" alt="twitter"></span>
+              <span class="alter-text-placeholder fixed-text">twitter</span>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="facebook" placeholder="facebook.com/">
+              <span class="input-img"><img src="images/social-facebook.png" alt="facebook"></span>
+              <span class="alter-text-placeholder fixed-text">Facebook</span>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="linkedin" placeholder="Linkedin.com/">
+              <span class="input-img"><img src="images/social-linkedin.png" alt="linkedin"></span>
+              <span class="alter-text-placeholder fixed-text">linkedin</span>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="instagram" placeholder="Instagram.com/">
+              <span class="input-img"><img src="images/social-instagram.png" alt="instagram"></span>
+              <span class="alter-text-placeholder fixed-text">Instagram</span>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="youtube" placeholder="Youtube.com/">
+              <span class="input-img"><img src="images/social-youtube.png" alt="youtube"></span>
+              <span class="alter-text-placeholder fixed-text">Youtube</span>
+            </div>
+            <div class="form-group position-relative">
+              <input type="text" class="form-control custom-select-control text-dark" id="website" placeholder="Website.com/">
+              <span class="alter-text-placeholder fixed-text">Website</span>
+            </div>
+          </form>
+        </div>
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#job-1" data-dismiss="modal" data-toggle="modal">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">2</span> of <span
+                class="total-steps">3</span></span>
+          </div>
+          <div>
+            <a class="btn btn-primary btn-lg" href="#job-3" data-dismiss="modal" data-toggle="modal">NEXT</a>
+          </div>
+        </div>
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
+  <!-- Modal Message -->
+  <div class="modal right fade" id="job-message" tabindex="-1" role="dialog" aria-labelledby="job-messageLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Important</h4>
+        </div>
+        <div class="modal-body text-center flex-center-vh">
+          <div class="container-fluid">
+            <div class="row center-vh">
+              <div class="col-lg-12 p-0">
+                <div class="user-details">
+                  <img class="mb-5" src="images/exit.png" alt="exit">
+                  <h3 class="fs24 mb-3">Are you sure?</h3>
+                  <p class="mb-4">This action cannot be undone, if you exitall the information will be deleted.</p>
+                  <a href="#job-4" class="btn btn-primary btn-lg" data-dismiss="modal" data-toggle="modal">CONTINUE
+                    CREATING THE JOB</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-nav modal-nav section-nav-bottom fsxs12 flex-center-vh py-3">
+          <a href="#" data-dismiss="modal">EXIT</a>
+        </div>
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
+  <!-- Modal STEP 3 -->
+  <div class="modal right fade" id="job-3" tabindex="-1" role="dialog" aria-labelledby="job-4Label">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close"><span data-toggle="modal"
+              data-target="#job-message" aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Edit Company</h4>
+        </div>
+        <div class="modal-body pb-3">
+          <div class="modal-title">
+            <h2 class="mb-3 pb-3">company video <span class="fs14 text-secondary" style="vertical-align: middle;">(Optional)</span></h2>
+            <p class="fs14 font-weight-normal">Upload a video to provide a clear and simple introduction to your company and help your company stand out to candidates
+            </p>
+          </div>
+          <div class="upload-vedios-container">
+            <form>
+              <label class="form__container flex-center-vh" id="upload-container">
+                <span class="font-weight-normal">
+                  <span class="d-block w-100 text-center mb-4">
+                    <img src="images/drag-drop-upload.png" alt="drag-drop-upload">
+                  </span>
+                  Drop your video here, or <span class="text-danger ml-1"> browse</span>
+                </span>
+                <input class="form__file" id="upload-files" type="file" accept="video/*" multiple="multiple" />
+              </label>
+              <h4 class="text-muted fs14 mt-2 pt-2 mb-3">Uploaded videos</h4>
+              <ul class="form__files-container" id="files-list-container">
+              </ul>
+            </form>
+          </div>
+        </div>
+        <div
+          class="section-nav modal-nav section-nav-bottom nav-three-items fsxs12 d-flex justify-content-between align-items-center py-3 flex-sm-row flex-column">
+          <div class="pl-xl-5 mb-sm-0 mb-3">
+            <a href="#job-2" data-dismiss="modal" data-toggle="modal">BACK</a>
+          </div>
+          <div class="mb-sm-0 mb-3">
+            <span class="text-secondary fs16">Step <span class="initial-step">3</span> of <span
+                class="total-steps">3</span></span>
+          </div>
+          <div>
+            <a href="" class="btn btn-primary btn-lg" data-dismiss="modal">Finish</a>
+          </div>
+        </div>
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
+  <!-- DASHBOARD -->
+  <main id="app">
+    <div id="wrapper" class="d-flex flex-column">
+      <!-- SIDEBAR -->
+      <nav id="sidebar" class="p-3">
+        <div class="nav-header d-md-block d-none">
+          <div class="brand">
+            <a href="#">
+              <img class="w-100" src="images/logo.png" alt="logo">
+            </a>
+          </div>
+        </div>
+        <div class="nav-components">
+          <ul class="list-unstyled d-md-block d-flex justify-content-around mb-0">
+            <li class="nav-item mb-md-3 mb-0">
+              <a href="#" class="nav-link active">
+                <span class="nav-icons">
+                  <img class="active-icon" src="images/dashboard/jobs-active.png" alt="jobs">
+                  <img class="current-icon" src="images/dashboard/jobs-default.png" alt="jobs">
+                </span>
+                <span class="nav-anchor d-md-block d-none">JOBS</span>
+              </a>
+            </li>
+            <li class="nav-item mb-md-3 mb-0">
+              <a href="#" class="nav-link">
+                <span class="nav-icons">
+                  <img class="active-icon" src="images/dashboard/company-active.png" alt="company">
+                  <img class="current-icon" src="images/dashboard/company-default.png" alt="company">
+                </span>
+                <span class="nav-anchor d-md-block d-none">COMPANY</span>
+              </a>
+            </li>
+            <li class="nav-item mb-md-3 mb-0">
+              <a href="#" class="nav-link">
+                <span class="nav-icons">
+                  <img class="active-icon" src="images/dashboard/account-active.png" alt="account">
+                  <img class="current-icon" src="images/dashboard/account-default.png" alt="account">
+                </span>
+                <span class="nav-anchor d-md-block d-none">MY ACCOUNT</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="nav-footer position-absolute d-md-block d-none" style="bottom: 1rem;">
+          <button class="btn nav-close-btn p-0 flex-center-vh" onclick="chngimg()">
+            <img id="nav-open" src="images/hamburger.png" alt="hamburger">
+            <span class="nav-anchor fs16">Close</span>
+          </button>
+        </div>
+      </nav>
+      <!-- APP BODY -->
+      <div id="app-body" class="d-flex flex-column p-3">
+        <!-- ALERT -->
+        <div id="deny-alert" class="alert alert-success flex-center-vh justify-content-between fsxs14 mb-4 fade d-none"
+          role="alert">
+          <span> <strong>Success.</strong> The candidature from XXX has been denied.</span>
+          <button type="button" class="align-items-center close btn d-flex h-100 py-0 ml-3" data-dismiss="alert"
+            aria-label="Close" style="opacity: inherit;">
+            <img src="images/close-white.png" alt="close">
+          </button>
+        </div>
+        <!-- HEADER -->
+        <header class="app-header mb-4">
+          <!-- APP BODY NAV -->
+          <nav class="app-body-nav d-flex justify-content-between">
+            <button class="btn btn-transparent p-0 fsxs12">
+              <a href="candidates.html" class="text-muted flex-center-vh">
+                <img src="images/back.png" class="mr-sm-4 mr-2" alt="back">
+                <span>Edit job details</span>
+              </a>
+            </button>
+            <a href="#job-1" class="btn btn-secondary btn-md flex-center-vh fsxs12" data-toggle="modal">
+              <img src="images/plus.png" alt="plus" style="margin-right: 12px;">
+              <span style="line-height: 16px;">ADD JOB</span>
+            </a>
+          </nav>
+        </header>
+        <section class="app-content open-jobs bg-white">
+          <!-- SECTION HEADER -->
+          <div class="section-header flex-center-vh justify-content-between mb-3">
+            <div class="section-title">
+              <h2>Details</h2>
+            </div>
+            <a href="#" class="btn btn-danger btn-sm ml-sm-3">SAVE</a>
+          </div>
+          <!-- SECTION CONTENT -->
+          <div class="section-content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6 pl-lg-0 text-left">
+                  <div class="about-job">
+                    <div class="about-the-job">
+                      <div class="section-title mb-3">
+                        <h3 class="fs16">About job</h3>
+                      </div>
+                      <form action="" class="mb-4">
+                        <div class="form-group position-relative">
+                          <input type="text" class="form-control custom-select-control text-dark" id="inputName"
+                            placeholder="Barista" required="">
+                          <span class="alter-text-placeholder fixed-text">Title / Role</span>
+                        </div>
+                        <div class="row m-0">
+                          <div class="col-lg-6 pl-lg-0 pr-lg-1 p-0">
+                            <div class="form-group position-relative">
+                              <input type="text" class="form-control custom-select-control text-dark" id="inputName"
+                                placeholder="Paris" required="">
+                              <span class="alter-text-placeholder fixed-text">Location</span>
+                            </div>
+                          </div>
+                          <div class="col-lg-6 pr-lg-0 pl-lg-1 p-0">
+                            <div class="form-group position-relative">
+                              <select class="form-control custom-select-control text-dark" id="type" required="">
+                                <option selected="">Full time</option>
+                                <option value="">Part time</option>
+                                <option value="">Days</option>
+                              </select>
+                              <span class="alter-text-placeholder fixed-text">Job Type</span>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                    <div class="job-type mb-3">
+                      <div class="section-title mb-3">
+                        <h3 class="fs16">Type</h3>
+                      </div>
+                      <ul class="list-unstyled d-flex mb-0">
+                        <li class="active  mb-3">
+                          <a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Full time</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Part time</a>
+                        </li>
+                        <li class="mb-3">
+                          <a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Days</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="salary">
+                      <div class="section-title mb-3">
+                        <h3 class="fs16">Salary</h3>
+                      </div>
+                      <form action="">
+                        <div class="form-group position-relative">
+                          <select class="form-control custom-select-control text-dark" id="currency" required="">
+                            <option selected="">EUR €</option>
+                            <option value="20">USD $</option>
+                            <option value="30">GBP £</option>
+                          </select>
+                          <span class="alter-text-placeholder fixed-text">Currency *</span>
+                        </div>
+                        <div class="d-flex flex-md-nowrap flex-wrap justify-content-between">
+                          <div class="form-group position-relative w-100 mr-md-2 mr-0">
+                            <input type="text" class="form-control custom-select-control text-dark" id="from"
+                              placeholder="0 €" required="">
+                            <span class="alter-text-placeholder fixed-text">From</span>
+                          </div>
+                          <div class="form-group position-relative w-100 mr-md-2 mr-0">
+                            <input type="text" class="form-control custom-select-control text-dark" id="to"
+                              placeholder="0 €" required="">
+                            <span class="alter-text-placeholder fixed-text">To</span>
+                          </div>
+                          <div class="form-group position-relative w-100">
+                            <select class="form-control custom-select-control text-dark" id="currency" required="">
+                              <option selected="">Per hour</option>
+                              <option value="example1">example</option>
+                              <option value="example2">example</option>
+                            </select>
+                            <span class="alter-text-placeholder fixed-text">Frequency</span>
+                          </div>
+                        </div>
+                        <div class="form-group position-relative">
+                          <input type="text" class="form-control text-dark" id="from" placeholder="Tips, comision..."
+                            required="">
+                        </div>
+                      </form>
+                    </div>
+                    <div class="description-container">
+                      <div class="section-title mb-3">
+                        <h3 class="fs16 mb-3">Company description</h3>
+                      </div>
+                      <div class="company-description mt-3 text-left">
+                        <h4 class="fs12 mb-1 text-secondary">Job description</h4>
+                        <p class="fs14 text-dark" style="line-height: 24px;">
+                          Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                          your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                          lifestyle with the freedom to work however, wherever — on your terms.
+                        </p>
+                        <p class="fs14 text-dark mb-0" style="line-height: 24px;">
+                          Design your lifestyle with the freedom to work however, wherever — on your terms. Design
+                          your lifestyle with the freedom to work however, wherever — on your terms. Design your
+                          lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
+                          your lifestyle with the freedom to work however, wherever — on your terms.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 text-left">
+                  <div class="upload-video">
+                    <div class="section-title mb-4">
+                      <h3 class="fs16 mb-3">Upload videos</h3>
+                      <p class="fs14">Upload several videos where you explain in a clear and simple way the offer so
+                        that candidates are interested in your job offer.</p>
+                    </div>
+                    <div class="upload-vedios-container">
+                      <form>
+                        <label class="form__container flex-center-vh" id="upload-container">
+                          <span class="font-weight-normal">
+                            <span class="d-block w-100 text-center mb-4">
+                              <img src="images/drag-drop-upload.png" alt="drag-drop-upload">
+                            </span>
+                            Drop your video here, or <span class="text-danger ml-1"> browse</span>
+                          </span>
+                          <input class="form__file" id="upload-files" type="file" accept="video/*"
+                            multiple="multiple" />
+                        </label>
+                        <h4 class="text-muted fs14 mt-2 pt-2 mb-3">Uploaded videos</h4>
+                        <ul class="form__files-container" id="files-list-container">
+                        </ul>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+  <!-- JQUERY -->
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <!-- POOPER -->
+  <script src="js/popper.min.js"></script>
+  <!-- BOOTSTRAP -->
+  <script src="js/bootstrap.min.js"></script>
+  <!-- CHART JS -->
+  <script src="js/chart.min.js"></script>
+  <!-- APP JS -->
+  <script src="js/app.js"></script>
+</body>
+
+</html>

@@ -25,9 +25,7 @@
 </head>
 
 <body class="bg-light">
-
   <!-- candidate-status modal -->
-
   <div class="modal right fade" id="candidate-status-modal" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -52,10 +50,12 @@
             </ul>
           </div>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- date-proposale modal -->
   <div class="modal right fade" id="date-proposale-modal" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
     <div class="modal-dialog" role="document">
@@ -81,12 +81,13 @@
           </div>
           <button class="btn btn-danger btn-lg w-75">THANK YOU, I HAVE ALREADY DONE SO</button>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- Modal STEP 1 -->
-
   <div class="modal right fade" id="job-1" tabindex="-1" role="dialog" aria-labelledby="job-1Label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -133,12 +134,13 @@
             <a class="btn btn-primary btn-lg" data-dismiss="modal" href="#job-2" data-toggle="modal">NEXT</a>
           </div>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- Modal STEP 2 -->
-
   <div class="modal right fade" id="job-2" tabindex="-1" role="dialog" aria-labelledby="job-2Label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -208,12 +210,13 @@
             <a class="btn btn-primary btn-lg" data-dismiss="modal" href="#job-3" data-toggle="modal">NEXT</a>
           </div>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- Modal STEP 3 -->
-
   <div class="modal right fade" id="job-3" tabindex="-1" role="dialog" aria-labelledby="job-3Label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -229,7 +232,8 @@
           <div class="job-type mb-5">
             <ul class="list-unstyled d-flex">
               <li class="active"><a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Full
-                  time</a></li>
+                  time</a>
+              </li>
               <li><a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Part time</a></li>
               <li><a href="#" class="badge badge-default p-3 mr-3 bg-light text-primary fs14">Days</a></li>
             </ul>
@@ -284,12 +288,13 @@
             <a class="btn btn-primary btn-lg" href="#job-4" data-dismiss="modal" data-toggle="modal">NEXT</a>
           </div>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- Modal Message -->
-
   <div class="modal right fade" id="job-message" tabindex="-1" role="dialog" aria-labelledby="job-messageLabel">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -316,12 +321,51 @@
         <div class="section-nav modal-nav section-nav-bottom fsxs12 flex-center-vh py-3">
           <a href="#" data-dismiss="modal">EXIT</a>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
+  <!-- Modal company Message -->
+  <div class="modal right fade" id="company-message" tabindex="-1" role="dialog" aria-labelledby="job-messageLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header justify-content-center">
+          <button type="button" class="close btn p-0" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true"><img src="images/close.png" alt="close"></span></button>
+          <h4 class="modal-title fs16">Delete Job</h4>
+        </div>
+        <div class="modal-body text-center flex-center-vh">
+          <div class="container-fluid">
+            <div class="row center-vh">
+              <div class="col-lg-12 p-0">
+                <div class="user-details">
+                  <img class="mb-5" src="images/exit.png" alt="exit">
+                  <h3 class="fs24 mb-3">Are you sure?</h3>
+                  <p class="mb-4">
+                    This action cannot be undone, if you delete the job all the data and information will be deleted.
+                  </p>
+                  <p class="mb-4">
+                    Maybe you prefer close the jobs. This acction doesn’t delete all the informacion, and you can reopen
+                    when you want..
+                  </p>
+                  <a href="#" id="delete-this-job" class="btn btn-primary btn-lg" data-dismiss="modal">CLOSE JOB</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section-nav modal-nav section-nav-bottom fsxs12 flex-center-vh py-3">
+          <a href="#" data-dismiss="modal">CANCEL</a>
+        </div>
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- Modal STEP 4 -->
-
   <div class="modal right fade" id="job-4" tabindex="-1" role="dialog" aria-labelledby="job-4Label">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
@@ -334,7 +378,8 @@
           <div class="modal-title">
             <h2 class="mb-3 pb-3">Upload videos</h2>
             <p class="fs14 font-weight-normal">Upload several videos where you explain in a clear and simple way the
-              offer so that candidates are interested in your job offer.</p>
+              offer so that candidates are interested in your job offer.
+            </p>
           </div>
           <div class="upload-vedios-container">
             <form>
@@ -367,17 +412,16 @@
             <a href="job-created.html" class="btn btn-primary btn-lg">NEXT</a>
           </div>
         </div>
-      </div><!-- modal-content -->
-    </div><!-- modal-dialog -->
-  </div><!-- modal -->
-
+      </div>
+      <!-- modal-content -->
+    </div>
+    <!-- modal-dialog -->
+  </div>
+  <!-- modal -->
   <!-- DASHBOARD -->
-
   <main id="app">
     <div id="wrapper" class="d-flex flex-column">
-
       <!-- SIDEBAR -->
-
       <nav id="sidebar" class="p-3">
         <div class="nav-header d-md-block d-none">
           <div class="brand">
@@ -424,13 +468,9 @@
           </button>
         </div>
       </nav>
-
       <!-- APP BODY -->
-
       <div id="app-body" class="d-flex flex-column p-3">
-
         <!-- ALERT -->
-
         <div id="deny-alert" class="alert alert-success flex-center-vh justify-content-between fsxs14 mb-4 fade d-none"
           role="alert">
           <span> <strong>Success.</strong> The candidature from XXX has been denied.</span>
@@ -439,13 +479,18 @@
             <img src="images/close-white.png" alt="close">
           </button>
         </div>
-
+        <!-- ALERT CLOSED JOB -->
+        <div id="delete-alert" class="text-white alert alert-primary flex-center-vh justify-content-between fsxs14 mb-4 fade d-none"
+          role="alert">
+          <span> <img src="images/info.png" alt="info" style="margin-top: -3px;"> <strong>Success.</strong> This Job was closed on 12/05/2020.</span>
+          <button type="button" class="align-items-center close btn d-flex h-100 py-0 ml-3" data-dismiss="alert"
+            aria-label="Close" style="opacity: inherit;">
+            <img src="images/close-white.png" alt="close">
+          </button>
+        </div>
         <!-- HEADER -->
-
         <header class="app-header mb-4">
-
           <!-- APP BODY NAV -->
-
           <nav class="app-body-nav d-flex justify-content-between">
             <button class="btn btn-transparent p-0 fsxs12">
               <a href="message.html" class="text-muted flex-center-vh">
@@ -459,11 +504,8 @@
             </a>
           </nav>
         </header>
-
         <section class="app-content open-jobs bg-white">
-
           <!-- SECTION HEADER -->
-
           <div class="section-header flex-center-vh justify-content-between">
             <ul class="nav nav-tabs mb-3" id="jobs-tab" role="tablist">
               <li class="nav-item">
@@ -480,9 +522,7 @@
                   src="images/search-blue.png" alt="search"> FIND A CANDIDATE</a>
             </div>
           </div>
-
           <!-- SECTION CONTENT -->
-
           <div class="section-content">
             <div class="tab-content" id="jobs-tab">
               <div class="tab-pane fade" id="candidates-tab-container" role="tabpanel" aria-labelledby="home-tab">
@@ -535,9 +575,7 @@
                           </form>
                         </div>
                         <div class="candidate-list">
-
                           <!-- CANDIDATES TAB -->
-
                           <ul class="nav nav-tabs flex-column mb-3" id="candidates-tab" role="tablist">
                             <li class="nav-item">
                               <a class="nav-link candidate-user-tab justify-content-between flex-center-vh active"
@@ -624,17 +662,14 @@
                               </a>
                             </li>
                           </ul>
-
                         </div>
                       </div>
                       <div class="col-xl-8 col-md-12 p-0 row center-vh m-0 tab-content" id="candidates-tab">
                         <div class="tab-pane fade flex-center-vh align-items-start active show w-100" id="user-1"
                           role="tabpanel" aria-labelledby="home-tab">
-
                           <!-- CANDIDATE VIDEOS -->
                           <div class="col-lg-6 mb-lg-0 mb-4">
                             <div class="candidate-video">
-
                               <!-- VIDEO CONTENT -->
                               <div class="tab-content flex-center-vh m-0" id="user-video-tab">
                                 <div class="tab-pane candidate-video-container fade flex-center-vh active show w-100"
@@ -668,7 +703,6 @@
                                   </video>
                                 </div>
                               </div>
-
                               <!-- VIDEO TABS -->
                               <ul class="nav nav-tabs flex-center-vh" id="user-video-tab" role="tablist">
                                 <li class="nav-item">
@@ -693,7 +727,6 @@
                               </ul>
                             </div>
                           </div>
-
                           <!-- CANDIDATE INFO -->
                           <div class="col-lg-6 text-left">
                             <div class="candidate-info-conatiner">
@@ -847,11 +880,9 @@
                         </div>
                         <div class="tab-pane fade flex-center-vh align-items-start w-100" id="user-2" role="tabpanel"
                           aria-labelledby="home-tab">
-
                           <!-- CANDIDATE VIDEOS -->
                           <div class="col-lg-6 mb-lg-0 mb-4">
                             <div class="candidate-video">
-
                               <!-- VIDEO CONTENT -->
                               <div class="tab-content flex-center-vh m-0" id="user-video-tab2">
                                 <div class="tab-pane candidate-video-container fade flex-center-vh active show w-100"
@@ -885,7 +916,6 @@
                                   </video>
                                 </div>
                               </div>
-
                               <!-- VIDEO TABS -->
                               <ul class="nav nav-tabs flex-center-vh" id="user-video-tab2" role="tablist">
                                 <li class="nav-item">
@@ -910,7 +940,6 @@
                               </ul>
                             </div>
                           </div>
-
                           <!-- CANDIDATE INFO -->
                           <div class="col-lg-6 text-left">
                             <div class="candidate-info-conatiner">
@@ -957,7 +986,6 @@
                                   </div>
                                 </div>
                               </div>
-
                               <!-- candidate-resume-tab -->
                               <div class="candidate-resume-tab">
                                 <ul
@@ -1057,11 +1085,9 @@
                         </div>
                         <div class="tab-pane fade flex-center-vh align-items-start w-100" id="user-3" role="tabpanel"
                           aria-labelledby="home-tab">
-
                           <!-- CANDIDATE VIDEOS -->
                           <div class="col-lg-6 mb-lg-0 mb-4">
                             <div class="candidate-video">
-
                               <!-- VIDEO CONTENT -->
                               <div class="tab-content flex-center-vh m-0" id="user-video-tab3">
                                 <div class="tab-pane candidate-video-container fade flex-center-vh active show w-100"
@@ -1095,7 +1121,6 @@
                                   </video>
                                 </div>
                               </div>
-
                               <!-- VIDEO TABS -->
                               <ul class="nav nav-tabs flex-center-vh" id="user-video-tab3" role="tablist">
                                 <li class="nav-item">
@@ -1283,9 +1308,9 @@
                     </p>
                   </div>
                   <div class="tab-nav-list flex-center-vh fs14">
-                    <a href="">DELETE</a>
+                    <a href="#company-message" data-toggle="modal">DELETE</a>
                     <a class="ml-sm-5 px-sm-4 px-2" href="">CLOSE</a>
-                    <button class="btn btn-danger btn-sm ml-sm-5">EDIT</button>
+                    <a href="job-info.html" class="btn btn-danger btn-sm ml-sm-5">EDIT</a>
                   </div>
                 </div>
                 <div class="company-video-container">
@@ -1332,32 +1357,38 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-6 mt-3 text-left">
+                      <div class="col-lg-6 pl-lg-3 pl-0 mt-3 text-left">
                         <div class="social-links d-md-inline-block p-0">
                           <ul class="list-unstyled flex-center-vh justify-content-between py-2 px-3 bg-light mb-0">
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/facebook.png" alt="Facebook_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/instagram.png" alt="Instagram_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/linkedin.png" alt="LinkedIN_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/twitter.png" alt="Twitter_black"></a></li>
-                            <li><a href="#"><img class="mr-3" src="images/social-icons/youtube.png" alt="Youtube_black"></a></li>
-                            <li><a href="#"><img  src="images/social-icons/website.png" alt="website"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/facebook.png"
+                                  alt="Facebook_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/instagram.png"
+                                  alt="Instagram_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/linkedin.png"
+                                  alt="LinkedIN_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/twitter.png"
+                                  alt="Twitter_black"></a></li>
+                            <li><a href="#"><img class="mr-3" src="images/social-icons/youtube.png"
+                                  alt="Youtube_black"></a></li>
+                            <li><a href="#"><img src="images/social-icons/website.png" alt="website"></a></li>
                           </ul>
                         </div>
                         <div class="company-logo-container flex-center-vh">
-                          <img class="w-100" src="images/logo-placeholder-image.png" alt="placeholder" style="max-width: 300px;">
+                          <img class="w-100" src="images/logo-placeholder-image.png" alt="placeholder"
+                            style="max-width: 300px;">
                         </div>
                       </div>
                     </div>
                     <div class="row">
-                      <div class="col-lg-6">
+                      <div class="col-lg-6 pl-lg-0">
                         <div class="company-description mt-3 text-left">
                           <h2 class="fs24 mb-3">Companny description</h2>
                           <p class="fs14 text-secondary" style="line-height: 24px;">
                             Design your lifestyle with the freedom to work however, wherever — on your terms. Design
                             your lifestyle with the freedom to work however, wherever — on your terms. Design your
                             lifestyle with the freedom to work however, wherever — on your terms.
-                            </p>
-                            <p class="fs14 text-secondary" style="line-height: 24px;">
+                          </p>
+                          <p class="fs14 text-secondary" style="line-height: 24px;">
                             Design your lifestyle with the freedom to work however, wherever — on your terms. Design
                             your lifestyle with the freedom to work however, wherever — on your terms. Design your
                             lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
@@ -1372,8 +1403,8 @@
                             Design your lifestyle with the freedom to work however, wherever — on your terms. Design
                             your lifestyle with the freedom to work however, wherever — on your terms. Design your
                             lifestyle with the freedom to work however, wherever — on your terms.
-                            </p>
-                            <p class="fs14 text-secondary" style="line-height: 24px;">
+                          </p>
+                          <p class="fs14 text-secondary" style="line-height: 24px;">
                             Design your lifestyle with the freedom to work however, wherever — on your terms. Design
                             your lifestyle with the freedom to work however, wherever — on your terms. Design your
                             lifestyle with the freedom to work however, wherever — on your terms. on your terms. Design
@@ -1388,11 +1419,139 @@
             </div>
           </div>
         </section>
+        <!-- STATUS -->
+        <!-- THIS SECTION HAS BEEN HIDED -->
+        <section class="app-content resume bg-white d-none">
+          <div class="section-content">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-lg-6 pl-lg-0">
+                  <div class="section-title text-left mb-4">
+                    <h2 class="fs24">Company Stats</h2>
+                  </div>
+                  <div class="row company-status justify-content-between m-0">
+                    <div class="col-sm-6 mb-4">
+                      <div class="job-chart-details flex-center-vh justify-content-start">
+                        <div class="chart-details text-left">
+                          <div>
+                            <h4 class="text-secondary fs16 font-weight-normal">Total jobs</h4>
+                          </div>
+                          <div>
+                            <h2>42</h2>
+                          </div>
+                          <div>
+                            <h5 class="font-weight-bold text-success fs16">+20%</h5>
+                          </div>
+                        </div>
+                        <div class="job-chart">
+                          <iframe class="chartjs-hidden-iframe"
+                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                          <canvas class="chart" width="272" height="50" style="width: 272px; height: 50px;"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                      <div class="job-chart-details flex-center-vh justify-content-start">
+                        <div class="chart-details text-left">
+                          <div>
+                            <h4 class="text-secondary fs16 font-weight-normal">Total applied</h4>
+                          </div>
+                          <div>
+                            <h2>567</h2>
+                          </div>
+                          <div>
+                            <h5 class="font-weight-bold text-success fs16">+200%</h5>
+                          </div>
+                        </div>
+                        <div class="job-chart">
+                          <iframe class="chartjs-hidden-iframe"
+                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                          <canvas class="chart" width="271" height="50" style="width: 271px; height: 50px;"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6 mb-4">
+                      <div class="job-chart-details flex-center-vh justify-content-start">
+                        <div class="chart-details text-left">
+                          <div>
+                            <h4 class="text-secondary fs16 font-weight-normal">interviwed</h4>
+                          </div>
+                          <div>
+                            <h2>10</h2>
+                          </div>
+                          <div>
+                            <h5 class="font-weight-bold text-danger fs16">-5%</h5>
+                          </div>
+                        </div>
+                        <div class="job-chart">
+                          <iframe class="chartjs-hidden-iframe"
+                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                          <canvas class="chart" width="272" height="50" style="width: 272px; height: 50px;"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-sm-6">
+                      <div class="job-chart-details flex-center-vh justify-content-start">
+                        <div class="chart-details text-left">
+                          <div>
+                            <h4 class="text-secondary fs16 font-weight-normal">Hired</h4>
+                          </div>
+                          <div>
+                            <h2>2</h2>
+                          </div>
+                          <div>
+                            <h5 class="font-weight-bold text-success fs16">+100%</h5>
+                          </div>
+                        </div>
+                        <div class="job-chart">
+                          <iframe class="chartjs-hidden-iframe"
+                            style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; inset: 0px;"></iframe>
+                          <canvas class="chart" width="272" height="50" style="width: 272px; height: 50px;"></canvas>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="section-title text-left mb-4">
+                    <h2 class="fs24">Company Details</h2>
+                  </div>
+                  <div class="row m-0 company-details-badges justify-content-start">
+                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job type</h3>
+                      <h2 class="fs18">Full time</h2>
+                    </div>
+                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                      <h3 class="text-muted fs14 font-weight-normal mb-3">Shift patterns</h3>
+                      <h2 class="fs18">Weekday</h2>
+                    </div>
+                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job start date</h3>
+                      <h2 class="fs18">23/07/21</h2>
+                    </div>
+                  </div>
+                  <div class="row m-0 company-details-badges justify-content-start">
+                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job type</h3>
+                      <h2 class="fs18">Full time</h2>
+                    </div>
+                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                      <h3 class="text-muted fs14 font-weight-normal mb-3">Shift patterns</h3>
+                      <h2 class="fs18">Weekday</h2>
+                    </div>
+                    <div class="col-lg-3 mb-3 badge badge-light mr-lg-3 p-3">
+                      <h3 class="text-muted fs14 font-weight-normal mb-3">Job start date</h3>
+                      <h2 class="fs18">23/07/21</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </div>
   </main>
-
-
   <!-- JQUERY -->
   <script src="js/jquery-3.0.0.min.js"></script>
   <!-- POOPER -->
